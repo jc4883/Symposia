@@ -7,9 +7,14 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script type="text/javascript">
+      window.root_page_image = "<%= image_url('root_page_image.png') %>";
+      window.symposia_logo = "<%= image_url('symposia_logo.png') %>";
+    </script>
   </head>
 
   <body>
     <%= yield %>
   </body>
 </html>
+

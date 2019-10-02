@@ -20,5 +20,15 @@ class Api::SessionsController < ApplicationController
     end
   end
 
+  def validate_username 
+    # check for user in db, 200 if username exists, 422 if otherwise
+    # write action in util 
+    @user = User.find_by(username: params[:user][:username])
+    if @user
+      render "api/users/show", status: 200
+    else
+      render json: ["Username not found"], status: 422
+    end
+  end
 
 end

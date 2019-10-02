@@ -5,20 +5,12 @@ import { Link } from 'react-router-dom';
 const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <nav className="login-signup">
-      <Link to="/login">Login</Link>
-      <Link to="/signup">Sign up!</Link>
+      <Link to="/login" className="login-signup-first">Sign in</Link>
+      <Link to="/signup" className="login-signup-second">Try it FREE</Link>
     </nav>
   );
-  const personalGreeting = () => {
-    return (
-    <hgroup className="header-group">
-      <h2 className="header-name">Hi, {currentUser.username}!</h2>
-      <button className="header-button" onClick={logout}>Log Out</button>
-    </hgroup>
-    )
-  }
 
-  return currentUser ? personalGreeting() : sessionLinks();
+  return sessionLinks();
 };
 
 

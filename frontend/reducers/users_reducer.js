@@ -1,4 +1,4 @@
-import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
+import { RECEIVE_CURRENT_USER, RECEIVE_VALIDATION } from '../actions/session_actions';
 
 
 const usersReducer = (state = {}, action) => {

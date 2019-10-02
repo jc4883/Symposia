@@ -13,3 +13,208 @@
  *= require_tree .
  *= require_self
  */
+
+
+ .login-signup {
+   margin-left: auto;
+ }
+
+ .give-basecamp-a-try {
+   text-decoration: none;
+   color: #1d2d35;
+   background-color: #ffe000;
+   font-weight: 900;
+   font-size: 21px;
+   font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+   padding: 15px 90px;
+   transition: 0.25s;
+   margin-top: 10px;
+   margin-bottom: 15px;
+ }
+.give-basecamp-a-try:hover {
+  background-color: #1d2d35;
+  color: #ffe000;
+  transition: 0.25s;
+}
+
+ .login-signup-first{
+   margin-right: 5px;
+   border: solid 2px black;
+   text-decoration: none;
+   color: #1d2d35;
+   font-weight: 900;
+   font-size: 15px;
+   font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+
+   padding: 8px 16px;
+   transition: 0.5s;
+ }
+  .login-signup-first:hover{
+   border: solid 1px #ffe000;
+   transition: .1s;
+ }
+
+
+ .login-signup-second {
+   margin-left: 5px;
+   color: white;
+   background-color: #1d2d35;
+   text-decoration: none;
+   font-weight: 900;
+   font-size: 17px;
+   font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+   height: 100px;
+   padding: 8px 16px;
+   transition: .5s;
+ }
+
+ .login-signup-second:hover {
+   color: #ffe000;
+   transition: .2s;
+ }
+
+ .top-nav {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+ }
+
+ .root-page-text {
+   display: flex;
+   flex-direction: column; 
+   align-items: center;
+   text-align: center;
+   color: #1d2d35;
+ }
+
+ .root-page-text h1 {
+   line-height: 1.05;
+   font-weight: 900;
+   font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+   padding: 0;
+   font-size: 77px;
+   margin-bottom: 10px;
+ }
+
+ .root-page-text p {
+    font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+    font-weight: 400;
+    font-size: 23px;   
+    margin-top: 8px; 
+ }
+
+ #root-page-image {
+   display: block;
+   width: 60%;
+   margin-top: 40px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.logo h1{
+  font-family: "Graphik",  "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-size: 27px;
+  font-weight: 600;
+  color: #1d2d35;
+  margin-left: 7px;
+}
+
+.logo {
+  margin-left: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+ #symposia-logo {
+  width: 45px;
+  height: 47px;
+  padding-right: 5px;
+  padding-left: 5px;
+ }
+
+ .hide-pass {
+   display: none;
+ }
+
+ .show-pass {
+   display: block;
+ }
+
+ 
+
+#login-symposia-logo {
+  width: 95px;
+  height: 100px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.login-form-container {
+  width: 450px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 0 -1px 10px rgba(0,0,0,0.05), 0 1px 4px rgba(0,0,0,0.1), 0 10px 30px #f3ece8;
+  border-radius: 5px;
+}
+
+.login-wrapper {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f6f2ef;
+}
+
+.login-form-container h2{
+  font-family: "Graphik",  "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1d2d35;
+}
+
+#login-username {
+  font-family: "Graphik",  "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #000000;
+
+}
+
+.login-form-container input {
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  margin-bottom: 15px;
+  font-size: 16px;
+  padding-left: 12px;
+}
+
+.login-form-box {
+  margin-top: 30px;
+  width: 87%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.next-button {
+  font-family: "Graphik",  "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #000000;
+  padding: 12px 15px;
+  margin-bottom: 32px;
+  border-radius: 5px;
+}
+
+.sign-up-instead {
+  margin-top: 5px;
+  font-family: 'Graphik', 'Helvetica Neue', helvetica, 'Apple Color Emoji', arial, sans-serif;
+  color: #1b6ac9;
+}
