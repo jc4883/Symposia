@@ -24,19 +24,28 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div className="login-form-container">
-        <h2>{this.props.formType}</h2>
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          <input type="text" value={this.state.username} onChange={this.update("username")}/>
-          <input type="text" value={this.state.password} onChange={this.update("password")}/>
-          <input type="submit" value="submit"/>
-          <Link to="/signup">Sign Up</Link>
-          <Link to="/login"> Log In</Link>
-        </form>
+      <div className="login-wrapper">
+        <img src={window.symposia_logo} id="login-symposia-logo" />
+        <h2>Sign up for Symposia Personal</h2>
+        <div className="login-form-container">
+          <form onSubmit={this.handleSubmit} className="signup-form-box">
+            <div id="type-name-and-email">Type your name & email address to begin</div>
+            <div className="test" id="login-errors" >{this.props.errors.map(err =>  <li>{err}<br/></li>)}</div>
+            <input placeholder="Your name" type="text" value={this.state.username} onChange={this.update("username")}/>
+            <input placeholder="Your password" type="password" value={this.state.password} onChange={this.update("password")}/>
+            <button className="next-button signup-next-button">Next</button>
+          </form>
+        </div>
+        <div className="already-have-account">
+          Already have an account? 
+          <Link className="log-in-link" to="/login"> Log In.</Link>
+        </div>
+            
       </div>
     )
   }
 
 }
+
 
 export default SessionForm;

@@ -1,0 +1,154 @@
+
+ .hide-pass {
+   display: none;
+ }
+
+ .show-pass {
+   display: block;
+ }
+
+ 
+
+#login-symposia-logo {
+  width: 95px;
+  height: 100px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.login-form-container {
+  width: 450px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 0 -1px 10px rgba(0,0,0,0.05), 0 1px 4px rgba(0,0,0,0.1), 0 10px 30px #f3ece8;
+  border-radius: 5px;
+}
+
+.login-wrapper {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f6f2ef;
+}
+
+.login-form-container h2{
+  font-family: "Graphik",  "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1d2d35;
+}
+
+#login-username {
+  font-family: "Graphik",  "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #000000;
+}
+
+#login-password {
+  font-family: "Graphik",  "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.login-form-container input {
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  margin-bottom: 15px;
+  font-size: 16px;
+  padding-left: 12px;
+}
+
+.login-form-box {
+  margin-top: 30px;
+  width: 87%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.next-button {
+  font-family: "Graphik",  "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #000000;
+  padding: 12px 15px;
+  margin-bottom: 32px;
+  border-radius: 5px;
+}
+
+.log-in-button {
+  font-family: "Graphik",  "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  background-color: #2da562;
+  color: #ffffff;
+  padding: 12px 15px;
+  margin-bottom: 32px;
+  border-radius: 5px;
+}
+
+.sign-up-instead {
+  margin-top: 20px;
+  font-family: 'Graphik', 'Helvetica Neue', helvetica, 'Apple Color Emoji', arial, sans-serif;
+  color: #1b6ac9;
+}
+
+#login-errors {
+  font-family: 'Graphik', 'Helvetica Neue', helvetica, 'Apple Color Emoji', arial, sans-serif;
+  color: #d4442e;
+}
+.dont-have-account {
+  font-family: 'Graphik', 'Helvetica Neue', helvetica, 'Apple Color Emoji', arial, sans-serif;
+  color: darkgrey;
+  margin-top: 20px;
+}
+
+.use-my-own-account-text {
+  font-family: 'Graphik', 'Helvetica Neue', helvetica, 'Apple Color Emoji', arial, sans-serif;
+  color: darkgrey;
+  font-weight: 100;
+}
+
+#use-my-account {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+.first-line {
+  margin-top: 30px;
+  width: 155px;
+  height: 2px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.line{
+  width: 155px;
+  height: 2px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.demo-login-button {
+  margin-bottom: 0;
+  font-family: "Graphik",  "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #000000;
+  padding: 12px 15px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.demo-login-form {
+  width: 87%;
+}

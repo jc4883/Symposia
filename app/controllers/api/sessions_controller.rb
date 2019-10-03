@@ -27,7 +27,7 @@ class Api::SessionsController < ApplicationController
     if @user
       render "api/users/show", status: 200
     else
-      render json: ["Username not found"], status: 422
+      render json: ["We couldn't find that one. Want to try another?"], status: 422
     end
   end
 

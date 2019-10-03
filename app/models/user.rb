@@ -6,6 +6,10 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
+  has_many :projects,
+  foreign_key: :user_id,
+  class_name: :Project
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     if user && user.is_password?(password) 
