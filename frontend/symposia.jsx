@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //createProject works 
   //fetchPosts() works {0: {…}, 1: {…}, 2: {…}, 3: {…}}
   //fetchPost(1) works {1: {…}}
+  //
   // TESTING END
 
   const root = document.getElementById("root");

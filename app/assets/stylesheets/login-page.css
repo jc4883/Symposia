@@ -88,7 +88,7 @@
 }
 
 
-input[type=text], textarea, #password-input {
+input[type=text], textarea, #password-input, #signup-password-input {
   -webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;
   -ms-transition: all 0.30s ease-in-out;
@@ -99,7 +99,7 @@ input[type=text], textarea, #password-input {
   border: 1px solid #DDDDDD;
 }
  
-input[type=text]:focus, textarea:focus, #password-input:focus {
+input[type=text]:focus, #signup-password-input:focus, textarea:focus, #password-input:focus {
   box-shadow: 0 0 5px rgba(81, 203, 238, 1);
   
   margin: 5px 1px 3px 0px;

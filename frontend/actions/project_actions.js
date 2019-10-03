@@ -44,8 +44,18 @@ export const createProject = (project) => dispatch => {
   });
 }
 
-export const updateProject = (project) => dispatch => 
-  API_Project_Util.updateProject(project).then(project => dispatch(receiveProject(project)))
+export const updateProject = (project) => dispatch => {
+  debugger
+  return API_Project_Util.updateProject(project).then(project => {
+    debugger
+     return dispatch(receiveProject(project))
+  })
+}
 
-export const deleteProject = (id) => dispatch => 
-  API_Project_Util.deleteProject(id).then(project => dispatch(removeProject(project.id)))
+export const deleteProject = (id) => dispatch => { 
+  debugger
+  return API_Project_Util.deleteProject(id).then(project => {
+    debugger
+    return dispatch(removeProject(project.id))
+  })
+}
