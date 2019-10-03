@@ -23,7 +23,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: #f6f2ef;
   box-shadow: 0 -1px 10px rgba(0,0,0,0.05), 0 1px 4px rgba(0,0,0,0.1), 0 10px 30px #f3ece8;
   border-radius: 5px;
 }
@@ -34,7 +34,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #f6f2ef;
 }
 
 .login-form-container h2{
@@ -49,6 +48,7 @@
   font-size: 17px;
   font-weight: 600;
   color: #000000;
+  
 }
 
 #login-password {
@@ -56,16 +56,17 @@
   font-size: 17px;
   font-weight: 600;
   color: #000000;
+  margin-top: 12px;
 }
 
 .login-form-container input {
   height: 40px;
   border-radius: 5px;
   border: 1px solid #bfbfbf;
-  margin-bottom: 15px;
   font-size: 16px;
   padding-left: 12px;
 }
+
 
 .login-form-box {
   margin-top: 30px;
@@ -83,6 +84,26 @@
   padding: 12px 15px;
   margin-bottom: 32px;
   border-radius: 5px;
+  margin-top: 8px;
+}
+
+
+input[type=text], textarea, #password-input {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+ 
+input[type=text]:focus, textarea:focus, #password-input:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
 }
 
 .log-in-button {
@@ -93,6 +114,7 @@
   color: #ffffff;
   padding: 12px 15px;
   margin-bottom: 32px;
+  margin-top: 10px;
   border-radius: 5px;
 }
 
@@ -152,3 +174,12 @@
 .demo-login-form {
   width: 87%;
 }
+
+#username-input {
+  padding-left: 12px;
+}
+
+#password-input {
+  padding-left: 12px;
+}
+

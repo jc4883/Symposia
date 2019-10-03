@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-
+import { login } from '../../util/session_api_util';
 class LoginForm extends React.Component {
   constructor(props) {
     super(props);
@@ -23,6 +23,9 @@ class LoginForm extends React.Component {
 
   update(field) {
     return (e) => {
+      if (this.props.errors.length > 0) {
+        this.props.clearErrors();
+      }
       this.setState({ [field]: e.target.value })
     }
   }
@@ -34,6 +37,7 @@ class LoginForm extends React.Component {
       return "show-pass";
     }
   } 
+
 
   notPassClass() {
     if (this.state.phase === "not validated") {
@@ -72,14 +76,27 @@ class LoginForm extends React.Component {
 
   // }
 
+  componentDidUpdate(prevProps) {
+
+    document.getElementById("password-input").focus();
+  }
+
   validateUsername(e) {
     e.preventDefault();
     this.props.validateUsername(this.state.username).then(
-      () => this.setState({phase: "validated"}))
+      () => { 
+        return this.setState({phase: "validated"}) 
+      })
   }
 
   demoLogin() {
-    // this.typeWriter()
+    // document.getElementById("username-input").value = "user1";
+    // setTimeout(() => {
+    //   console.log("here");
+    //   document.getElementById("next-button-to-click").click();
+    // }, 1000);
+
+    this.props.processForm({username: "demologger", password: "abbieR0ad"})
   }
 
   render() {
@@ -97,13 +114,13 @@ class LoginForm extends React.Component {
             <div className="use-my-own-account-text">Or, use my own account </div>    
           <div className="line"></div>
         </div>  
-        <form onSubmit={this.chooseAction()} className="login-form-box">
+        <form id="login-form" onSubmit={this.chooseAction()} className="login-form-box">
           <div id="login-username">Username</div>
-          <input id="username-input" type="text" value={this.state.username} onChange={this.update("username")} />
+          <input autoComplete="off" autoFocus="autofocus" placeholder="e.g. julie24" id="username-input" type="text" value={this.state.username} onChange={this.update("username")} />
           <div id="login-errors" >{this.props.errors}</div>
             <div id="login-password" className={this.passClass()}>Password</div>
-          <input id="password-input" className={this.passClass()} type="password" value={this.state.password} onChange={this.update("password")} />
-          <button className={`next-button ${this.notPassClass()}`}>Next</button>
+          <input autoFocus="autofocus" type="text"  id="password-input" className={this.passClass()} type="password" value={this.state.password} onChange={this.update("password")} />
+          <button id="next-button-to-click" className={`next-button ${this.notPassClass()}`}>Next</button>
             <button className={`log-in-button ${this.passClass()}`}>Log in</button>
         </form>  
           

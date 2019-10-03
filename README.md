@@ -10,9 +10,9 @@ Things you may want to cover:
 * System dependencies
 
 * Configuration
-
+      npm install webpack webpack-cli react react-dom react-redux redux redux-logger @babel/core @babel/preset-react @babel/preset-env babel-loader
 * Database creation
-
+      be rails db:setup
 * Database initialization
 
 * How to run the test suite

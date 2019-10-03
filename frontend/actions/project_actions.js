@@ -27,17 +27,13 @@ const removeProject = (id) => {
 }
 
 export const fetchProjects = () => dispatch => {
-  debugger
   return API_Project_Util.fetchProjects().then(projects => {
-    debugger
     return dispatch(receiveProjects(projects));
   })
 }
 
 export const fetchProject = (id) => dispatch => {
-  debugger
   return API_Project_Util.fetchProject(id).then(project => {
-    debugger
     return dispatch(receiveProject(project));
   })
 }
