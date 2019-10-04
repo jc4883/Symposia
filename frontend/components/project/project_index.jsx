@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from '../nav_bar/nav_bar';
+import NavBar from '../nav_bar/nav_bar_container';
 import ProjectIndexItem from './project_index_item';
 import ProjectIndexCreator from './project_index_creator';
 
@@ -36,3 +36,6 @@ class ProjectIndex extends React.Component {
 }
 
 export default ProjectIndex;
+
+
+

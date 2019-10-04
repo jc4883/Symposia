@@ -22,20 +22,23 @@
     display: flex;
     align-items: center; /* Default */
     justify-content: space-between;
+    background-color: #F6F1EE;
     flex-direction: row;
-    width: 100%;
-    background: #f6f1ee;    
+    height: 40px;
+    width: 100%;   
     top: 0;
     left: 0;
     position: fixed;
 }
 
+
 #nav li {
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   list-style-type: none;
-  background: #f6f1ee;
+  
   font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
   font-size: 19px;
   padding-left: 5px;
@@ -54,11 +57,12 @@
   color: #283c46;
   font-size: 17px;
   text-decoration: none;
-  margin-right: 150px;
+  margin-right: 110px;
 }
 
 
 #profile-avatar {
+  margin-right: 10px;
   display: flex;
   flex-direction: row;
 }

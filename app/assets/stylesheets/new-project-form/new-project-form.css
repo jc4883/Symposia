@@ -1,0 +1,103 @@
+#new-project-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 58em;
+  background: #fff;
+  box-shadow: 0 -1px 10px rgba(0,0,0,0.05), 0 1px 4px rgba(0,0,0,0.1), 0 10px 30px #f3ece8;
+  border-radius: 0.2em 0.2em 0 0;
+  text-align: center;
+  margin-top: 55px;
+  padding-bottom: 18.7rem;
+  text-decoration: none;
+}
+
+#new-project-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#new-project-symposia-logo {
+  margin-top: 72px;
+  width: 113px;
+  height: 120px; 
+}
+
+#new-project-container h2{
+  font-weight: bold;
+  font-size: 1.5em;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  color: #283c46;
+  margin-top: 0;
+}
+
+#new-project-container h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  color: #283c46;
+  text-align: left;
+  margin-bottom: 0px;
+}
+
+#new-project-form {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 64%;
+  max-width: 58em;
+  background: #fff;
+}
+
+#name-this-project{
+  height: 27px;
+  padding: 0.3em;
+  padding-left: 10px;
+  transition: box-shadow 0.15s ease-in-out;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.4rem;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  color: #283c46;
+  font-size: 16px;
+}
+
+#new-project-form input:focus,  {
+  outline: none;
+  border-color: #a4d2ff;
+  box-shadow: 0 0 6px rgba(27,106,201,0.5);
+}
+
+#add-description {
+  height: 78px;
+  padding: 0.3em;
+  padding-left: 10px;
+  transition: box-shadow 0.15s ease-in-out;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.4rem;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  color: #283c46;
+  font-size: 16px;
+  resize: none;
+}
+
+#create-button {
+  background-color: #2da562;
+  border-color: #2da562;
+  color: #fff;
+  padding-top: 3px;
+  padding-left: 3px;
+  border-radius: 1.5em;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-size: 16px;
+  width: 176px;
+  height: 43px;
+  display: block;
+  margin: 47px auto;
+  text-decoration: none;
+}
+
+/* text-decoration: none on button doesn't work */

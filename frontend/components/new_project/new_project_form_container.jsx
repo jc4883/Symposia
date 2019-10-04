@@ -5,7 +5,7 @@ import { createProject } from '../../actions/project_actions'
 
 const mapStateToProps = (state) => {
   return ({
-
+    currentUser: state.entities.users[state.session.id]
   })
 }
 
