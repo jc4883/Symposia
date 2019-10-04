@@ -14,6 +14,12 @@ class LoginForm extends React.Component {
     this.validateUsername = this.validateUsername.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
     //this.typeWriter = this.typeWriter.bind(this);
+    this.getIncorrectPasswordError = this.getIncorrectPasswordError.bind(this);
+    this.messagesExceptIncorrectPassword = this.messagesExceptIncorrectPassword.bind(this);
+    this.shortenClass = this.shortenClass.bind(this);
+    this.passErrorExists = this.passErrorExists.bind(this);
+    this.messagesExceptIncorrectPassword = this.messagesExceptIncorrectPassword.bind(this);
+
   }
 
   handleSubmit(e) {
@@ -23,7 +29,7 @@ class LoginForm extends React.Component {
 
   update(field) {
     return (e) => {
-      if (this.props.errors.length > 0) {
+      if (this.props.errors.includes("We couldn't find that one. Want to try another?")) {
         this.props.clearErrors();
       }
       this.setState({ [field]: e.target.value })
@@ -38,6 +44,11 @@ class LoginForm extends React.Component {
     }
   } 
 
+  shortenClass() {
+    if (this.state.phase === "validated"){
+      return "shorten-form";
+    } 
+  }
 
   notPassClass() {
     if (this.state.phase === "not validated") {
@@ -75,6 +86,9 @@ class LoginForm extends React.Component {
   //   //this.props.processForm({ user: "demologger", password: "abbieR0ad" })
 
   // }
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
 
   componentDidUpdate(prevProps) {
 
@@ -89,14 +103,37 @@ class LoginForm extends React.Component {
       })
   }
 
-  demoLogin() {
+  demoLogin(e) {
     // document.getElementById("username-input").value = "user1";
     // setTimeout(() => {
     //   console.log("here");
     //   document.getElementById("next-button-to-click").click();
     // }, 1000);
-
+    e.preventDefault();
     this.props.processForm({username: "demologger", password: "abbieR0ad"})
+  }
+
+  getIncorrectPasswordError() {
+    let incorrectPassMsg = "We didn\'t recognize that password."
+    if (this.props.errors[0] === incorrectPassMsg) {
+      return(
+        <div>{incorrectPassMsg}</div> 
+      ) 
+    }
+  }
+
+  messagesExceptIncorrectPassword() {
+    return this.props.errors.filter((err) => {
+      return err !== "We didn\'t recognize that password."
+    })
+  }
+
+  passErrorExists() {
+    if (this.props.errors.includes("We didn\'t recognize that password.")) {
+      return "error-e-class";
+    } else {
+      return "error-dne-class";
+    }
   }
 
   render() {
@@ -114,12 +151,21 @@ class LoginForm extends React.Component {
             <div className="use-my-own-account-text">Or, use my own account </div>    
           <div className="line"></div>
         </div>  
+
+        <ul id="incorrect-password" className={this.passErrorExists()}>
+          <div id="incorrect-password-inner-div">
+              {this.getIncorrectPasswordError()}
+              
+          </div>
+          
+        </ul>
+
         <form id="login-form" onSubmit={this.chooseAction()} className="login-form-box">
           <div id="login-username">Username</div>
-          <input autoComplete="off" autoFocus="autofocus" placeholder="e.g. julie24" id="username-input" type="text" value={this.state.username} onChange={this.update("username")} />
-          <div id="login-errors" >{this.props.errors}</div>
+          <input autoComplete="off" autoFocus="autofocus" placeholder="e.g. julie24" id="username-input" type="text" value={this.state.username} onChange={this.update("username")}/>
+          <div id="login-errors" >{this.messagesExceptIncorrectPassword()}</div>
             <div id="login-password" className={this.passClass()}>Password</div>
-          <input autoFocus="autofocus" type="text"  id="password-input" className={this.passClass()} type="password" value={this.state.password} onChange={this.update("password")} />
+          <input autoFocus="autofocus" type="text"  id="password-input" className={this.passClass()} type="password" value={this.state.password} onChange={this.update("password")}/>
           <button id="next-button-to-click" className={`next-button ${this.notPassClass()}`}>Next</button>
             <button className={`log-in-button ${this.passClass()}`}>Log in</button>
         </form>  

@@ -1,0 +1,23 @@
+@import './project-index.css';
+@import './nav_bar.css';
+
+
+#project-index {
+  background-color: #f6f2ef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+#your-projects {
+  padding-top: 30px;
+  margin-top: 50px;
+  color: #283c46;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+

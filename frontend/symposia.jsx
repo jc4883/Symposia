@@ -27,8 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
   window.projectsActions = projectsActions;
   //createProject works 
   //fetchPosts() works {0: {…}, 1: {…}, 2: {…}, 3: {…}}
-  //fetchPost(1) works {1: {…}}
-  //
+  //fetchPost(1) works {1: {…}}, adds an object to projects slice
+  //updatePost(post) works {2: {…}}, returns full projects slice
+  //deletePost(id) works, returns full projects slice
   // TESTING END
 
   const root = document.getElementById("root");

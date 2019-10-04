@@ -25,6 +25,10 @@ class SessionForm extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
+
   render() {
     return (
       <div className="login-wrapper">
@@ -34,8 +38,8 @@ class SessionForm extends React.Component {
           <form onSubmit={this.handleSubmit} className="signup-form-box">
             <div id="type-name-and-email">Type your name & a password to begin</div>
             <div className="test" id="login-errors" >{this.props.errors.map(err =>  <li>{err}<br/></li>)}</div>
-            <input autoComplete="off" autoFocus="autofocus" id="signup-username-input" placeholder="Your name" type="text" value={this.state.username} onChange={this.update("username")}/>
-            <input autoComplete="off" id="signup-password-input" placeholder="Your password" type="password"  value={this.state.password} onChange={this.update("password")}/>
+            <input autoComplete="off" autoFocus="autofocus" id="signup-username-input" placeholder="Your name" type="text" value={this.state.username} onChange={this.update("username")} required/>
+            <input autoComplete="off" id="signup-password-input" placeholder="Your password" type="password"  value={this.state.password} onChange={this.update("password")} required/>
             <button className="next-button signup-next-button">Next</button>
           </form>
         </div>

@@ -23,12 +23,12 @@ const Splash = () => {
         </h1>
 
         <p>
-          <strong>Before Basecamp:</strong> Projects feel scattered, things
-          slip, it’s tough to see where things <br />stand, and people are stressed. <strong>After Basecamp:</strong> Everything’s organized in one place, <br/>
+          <strong>Before Symposia:</strong> Projects feel scattered, things
+          slip, it’s tough to see where things <br />stand, and people are stressed. <strong>After Symposia:</strong> Everything’s organized in one place, <br/>
           you’re on top of things, progress is clear, and a sense of calm sets in.
         </p>
-        <Link to="/signup" class="give-basecamp-a-try">
-          Give Basecamp a Try
+        <Link to="/signup" className="give-basecamp-a-try">
+          Give Symposia a Try
         </Link>
       </div>
 

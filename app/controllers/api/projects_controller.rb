@@ -16,8 +16,11 @@ class Api::ProjectsController < ApplicationController
 
   
   def destroy
+    debugger
     @project = Project.find_by(id: params[:id])
+    debugger
     @project.destroy
+    debugger
     render "api/projects/show"
   end
 

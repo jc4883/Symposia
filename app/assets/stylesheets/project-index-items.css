@@ -1,0 +1,50 @@
+/* includes project_index_creator */
+
+#index-item-title {
+  font-size: 22px;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  color: #283c46;
+  margin-left: 24px;
+  padding-top: 27px;
+}
+
+#index-item-description {
+  margin-top: -10px;
+  margin-left: 24px;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.index-item-container {
+  list-style: none;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 -1px 10px rgba(0,0,0,0.05), 0 1px 4px rgba(0,0,0,0.1), 0 10px 30px #f3ece8;
+  width: 627px;
+  height: 208px;
+}
+
+.circle-on-index-item {
+  margin-top: 65px;
+  padding-top: 9px;
+  margin-left: 24px;
+  height: 36px;
+  width: 45px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: #d147ec;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  color: white;
+  font-size: 22px;
+  transition: .25s;
+}
+
+#index-creator-comp {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
