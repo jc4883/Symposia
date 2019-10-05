@@ -5,6 +5,7 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.handleDropDown = this.handleDropDown.bind(this);
+    this.scrollEventHandler = this.scrollEventHandler.bind(this);
   }
 
   handleDropDown() {
@@ -12,8 +13,26 @@ class NavBar extends React.Component {
     //document.getElementById("triangle-boy").classList.toggle("show-triangle-boy")
   }
 
+  scrollEventHandler() {
+    if (window.pageYOffset > 0) {
+      document.getElementById("nav").classList.add("show-line");
+    } else {
+      document.getElementById("nav").classList.remove("show-line");
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.scrollEventHandler);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.scrollEventHandler);
+  }
+
+
   render() {
     return (
+      <div id="big-container">
       <div id="nav">
         <li id="nav-bar-logo-div">
           <img id="nav-bar-symposia-logo" src={window.transparent_symposia_logo} />
@@ -63,6 +82,9 @@ class NavBar extends React.Component {
           </div>
         </li>
       </div>
+        <div id="line-boi" className="hide-line"></div>
+      </div>
+
     )
   }
 }

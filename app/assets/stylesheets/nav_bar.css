@@ -29,6 +29,7 @@
     top: 0;
     left: 0;
     position: fixed;
+    z-index: 1000;
 }
 
 
@@ -146,8 +147,14 @@
   font-weight: 300;
   line-height: 1.5;
   font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  position: relative;
+  z-index: 1000;
 }
 
+#avatar-dropdown {
+  position: fixed;
+  z-index: 4;
+}
 
 
 #message-from-socrates, #personal-settings {
@@ -192,4 +199,8 @@
   border-right: 10px solid transparent;
   border-bottom: 10px solid #ffffff;
   z-index: 2;
+}
+
+.show-line {
+      border-bottom: 1px solid lightgrey;
 }

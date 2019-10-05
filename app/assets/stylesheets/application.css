@@ -19,8 +19,13 @@
 @import './login-page.css';
 @import './signup-page.css';
 @import './project-index.css';
+@import './show-project/show-project.css';
 
 html {
+  scroll-behavior: smooth;
   background-color: #f6f2ef;
 }
 
+.white-background {
+  background-color: #ffffff;
+}

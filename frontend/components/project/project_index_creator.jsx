@@ -9,11 +9,11 @@ class ProjectIndexCreator extends React.Component {
 
   render() {
     return (
+      <Link to="/projects/new">
       <div id="index-creator-comp" className="index-item-container">
-        <Link to="/projects/new">
           <img src={window.transparent_new_project_button}/>
-        </Link>
       </div>
+      </Link>
     )
   }
 

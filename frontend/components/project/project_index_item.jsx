@@ -1,13 +1,27 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchProject } from '../../actions/project_actions';
+import { Redirect, Link } from 'react-router-dom';
+
 
 class ProjectIndexItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+    this.state = { toProjectShow: false };
+  } 
 
+  handleClick() {
+    this.setState({toProjectShow: true});
+  }
 
   render() {
+    if (this.state.toProjectShow === true) {
+      return <Redirect to={`/project/${this.props.project.id}`}/>
+    }
+
     return (
-      <li key={this.props.key} className="index-item-container">
+      <li onClick={this.handleClick} key={this.props.key} className="index-item-container">
         <img id="show-more-index" src={window.show_more_index}/>
         <h1 id="index-item-title" >{this.props.project.title}</h1>
         <h2 id="index-item-description">{this.props.project.description}</h2>

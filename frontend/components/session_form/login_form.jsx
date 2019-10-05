@@ -86,8 +86,14 @@ class LoginForm extends React.Component {
   //   //this.props.processForm({ user: "demologger", password: "abbieR0ad" })
 
   // }
+
+  componentDidMount() {
+    document.getElementById("html").classList.add("white-background");
+  }
+
   componentWillUnmount() {
     this.props.clearErrors();
+    document.getElementById("html").classList.remove("white-background");
   }
 
   componentDidUpdate(prevProps) {

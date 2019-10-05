@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
   <head>
     <title>Symposia</title>
     <%= csrf_meta_tags %>
@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
     <script type="text/javascript">
       window.root_page_image = "<%= image_url('root_page_image.png') %>";
       window.symposia_logo = "<%= image_url('symposia_logo.png') %>";
@@ -16,6 +17,14 @@
       window.feynman = "<%= image_url('feynman.gif') %>"
       window.transparent_new_project_button = "<%= image_url('transparent_new_project_button.png') %>"
       window.show_more_index = "<%= image_url('show_more_index.png') %>"
+      window.show_more_project_show = "<%= image_url('show-more-project-show.png') %>"
+      window.project_show_dropdown = "<%= image_url('project-show-dropdown.png') %>"
+      window.project_show_delete = "<%= image_url('project-show-delete.png') %>"
+      window.project_show_edit = "<%= image_url('project-show-edit.png') %>"
+      window.project_show_todo = "<%= image_url('project-show-todo.png') %>"
+      window.project_show_schedule = "<%= image_url('project-show-schedule.png') %>"
+      window.project_show_docs = "<%= image_url('project-show-docs.png') %>"
+
     </script>
   </head>
 

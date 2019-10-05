@@ -1,0 +1,254 @@
+#show-project-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+#show-project-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 58em;
+  background: #fff;
+  box-shadow: 0 -1px 10px rgba(0,0,0,0.05), 0 1px 4px rgba(0,0,0,0.1), 0 10px 30px #f3ece8;
+  border-radius: 0.2em 0.2em 0 0;
+  text-align: center;
+  margin-top: 35px;
+  padding-bottom: 40px;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#show-project-container {
+      text-align: center;
+      display: flex;
+      font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+    color: #283c46;
+}
+
+#show-project-header {
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.project-name {
+  font-size: 32px;
+  word-wrap: break-word;
+  margin: 0 auto;
+  max-width: 72rem;
+  font-weight: bold;
+  text-align: center;
+  color: #283c46;
+}
+
+#project-show-description {
+  font-size: 16px;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  max-width: 80rem;
+  color: #283c46;
+}
+
+#project-show-invite {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+  margin-right: 26px;
+}
+
+#project-show-circle {
+  padding-top: 6px;
+  height: 24px;
+  margin-right: 14px;
+}
+
+#project-show-invite-button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 1.5em;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+    white-space: normal;
+    cursor: pointer;
+    max-width: 100%;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    margin-top: 2px;
+    width: 146px;
+    height: 32px;
+    font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+    font-size: 13px;
+    color: #283c46;
+}
+
+#show-more-project-show {
+  float: right;
+  margin-top: 17px;
+  margin-right: 14px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#activity-body {
+  display: flex;
+  justify-content: center;
+  margin-top: 3px;
+}
+
+#show-project-symposia-logo {
+  height: 65px;
+  width: 60px;
+}
+
+#misc-info {
+  width: 75%;
+}
+
+/* project activity start */
+
+/*
+.project-activity-line {
+  width: 90%; 
+  text-align: center; 
+  border-bottom: 1px solid lightgrey; 
+  line-height: 0.1em;
+  margin: 10px 0 20px; 
+}
+
+#project-activity-show {
+  font-size: 24px;
+  margin: 0 auto;
+  max-width: 72rem;
+  font-weight: bold;
+  text-align: center;
+  color: #283c46;
+
+  background-color: #ffffff;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#project-activity-line-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+*/
+
+/* project activity end */
+#misc-info {
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  color: #283c46;
+}
+
+#misc-info h4 {
+  font-size: 12px;
+  font-weight: 200;
+  margin: 0;
+}
+
+#misc-info h2{
+  margin: 0;
+  font-size: 19px;
+}
+
+#misc-info p {
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+#misc-info a {
+  color: #1b6ac9;
+}
+
+#main-grid {
+  width: 811px;
+  height: 539px;
+}
+
+.show-show {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  background-color: #1b6ac9;
+  
+  transition:  .2s;
+  right: -330px;
+  top: -16px;
+  margin-right: 330px;
+  color: white;
+}
+
+.show-dropdown-content {
+  display: none;
+  position: absolute;
+  width: 260px;
+  height: 100px;
+
+}
+
+
+  
+  /*
+    display: block;
+    position: absolute;
+    margin-left: 334px;
+    margin-top: -379px;
+    width: 260px;
+    height: 264px;
+    background-color: red;
+    opacity: 1;
+    transition: 1s;
+    */
+}
+
+#project-show-dropdown-image {
+  float: right;
+  margin-top: 17px;
+  margin-right: 14px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#show-dropdown li{
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+#show-dropdown {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo_images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+#drop-ul li {
+  float: top;
+  list-style: none;
+}
+#drop-ul li div {
+  display: block;
+  padding: 24px 14px;
+}

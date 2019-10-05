@@ -27,7 +27,13 @@ class SessionForm extends React.Component {
 
   componentWillUnmount() {
     this.props.clearErrors();
+    document.getElementById("html").classList.remove("white-background");
   }
+
+  componentDidMount() {
+    document.getElementById("html").classList.add("white-background");
+  }
+
 
   render() {
     return (
