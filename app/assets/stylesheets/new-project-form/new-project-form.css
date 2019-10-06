@@ -65,7 +65,7 @@
   font-size: 16px;
 }
 
-#new-project-form input:focus,  {
+#new-project-form input:focus  {
   outline: none;
   border-color: #a4d2ff;
   box-shadow: 0 0 6px rgba(27,106,201,0.5);
@@ -98,6 +98,5 @@
   display: block;
   margin: 47px auto;
   text-decoration: none;
+  outline: none;
 }
-
-/* text-decoration: none on button doesn't work */

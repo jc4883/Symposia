@@ -2,22 +2,48 @@
 
 
 import React from 'react';
-import NavBar from '../nav_bar/nav_bar_container';
-import { Link } from 'react-router-dom';
+import ProjectForm from './project_form';
 
 class EditProjectForm extends React.Component {
-  constructor(props) {
-    super(props)
-    this.handleSubmit = this.handleSubmit.bind(this);
+
+  componentDidMount() {
+    this.props.fetchProject(this.props.match.params.projectId);
   }
 
-  handleSubmit() {
-    const title = document.getElementById("update-this-project").value;
-    const description = document.getElementById("update-description").value;
-    this.props.updateProject({ title: `${title}`, description: `${description}`, user_id: `${this.props.currentUser.id}` })
-      .then(this.props.history.push('/projects'))
+  componentDidUpdate(prevProps) {
+    if (prevProps.projectId != this.props.match.params.projectId) {
+      this.props.fetchProject(this.props.match.params.projectId);
+    }
+  }
 
+
+  render() {
+    if (!this.props.project) {
+      return null;
+    }
+    const { logout, projectId, updateProject, project, currentUser } = this.props;
+    return (
+      <ProjectForm
+        currentUser={currentUser}
+        projectId={projectId}
+        updateProject={updateProject}
+        logout={logout}
+        project={project} />
+    );
   }
 }
 
 export default EditProjectForm;
+
+
+/*
+
+
+
+ <div id="edit-project-container">
+          
+          
+          
+        </div>
+
+*/

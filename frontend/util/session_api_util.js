@@ -40,17 +40,8 @@ export const validateUsername = (username) => {
   //passClass, action, state.phase
 
   //passClass: hide-pass or show-pass
-  /*
-    .show-pass {
-      display: block;
-    }
+  
 
-    .hide-pass {
-      display: block;
-    }
-
-    password input class={passClass}
-    */
   //  input {
   //    transition: display .5s
   //  }

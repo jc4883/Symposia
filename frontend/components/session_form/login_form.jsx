@@ -69,7 +69,7 @@ class LoginForm extends React.Component {
   // typeWriter(letter) {
   //   let i = 0;
   //   let j = 0;
-  //   let username = 'demologger'; /* The text */
+  //   let username = 'demologger'; 
   //   let password = "abbieR0ad";
 
 

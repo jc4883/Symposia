@@ -20,7 +20,7 @@
 
 #nav {
     display: flex;
-    align-items: center; /* Default */
+    align-items: center; 
     justify-content: space-between;
     background-color: #F6F1EE;
     flex-direction: row;
@@ -98,26 +98,6 @@
   display: inline-block;
 }
 
-.dropdown-content {
-
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  width: 352px;
-  height: 390px;
-  z-index: 1;
-}
-
-.show {
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
-  margin-left: -318px;
-  margin-top: 33px;
-  border-radius: 5px;
-  box-shadow: 0 0 4px rgba(0,0,0,0.15), 0 5px 10px rgba(0,0,0,0.05);
-}
-
 .log-out-button {
   margin-top: -10px;
   margin-bottom: 8px;
@@ -151,10 +131,35 @@
   z-index: 1000;
 }
 
+
+
+
 #avatar-dropdown {
   position: fixed;
   z-index: 4;
 }
+.dropdown-content {
+
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  width: 352px;
+  height: 390px;
+  z-index: 1;
+}
+.show {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  margin-left: -318px;
+  margin-top: 33px;
+  border-radius: 5px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.15), 0 5px 10px rgba(0,0,0,0.05);
+}
+
+
+
+
 
 
 #message-from-socrates, #personal-settings {
@@ -188,9 +193,7 @@
 }
 
 
-/* currently ommitting triangle boy
-  <div id="triangle-boy" className="arrow-up "></div>
-*/
+
 .show-triangle-boy {
   display: block;
   width: 0; 

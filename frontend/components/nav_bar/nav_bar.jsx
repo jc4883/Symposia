@@ -8,11 +8,6 @@ class NavBar extends React.Component {
     this.scrollEventHandler = this.scrollEventHandler.bind(this);
   }
 
-  handleDropDown() {
-    document.getElementById("avatar-dropdown").classList.toggle("show");
-    //document.getElementById("triangle-boy").classList.toggle("show-triangle-boy")
-  }
-
   scrollEventHandler() {
     if (window.pageYOffset > 0) {
       document.getElementById("nav").classList.add("show-line");
@@ -30,6 +25,11 @@ class NavBar extends React.Component {
   }
 
 
+
+  handleDropDown() {
+    document.getElementById("avatar-dropdown").classList.toggle("show");
+    //document.getElementById("triangle-boy").classList.toggle("show-triangle-boy")
+  }
   render() {
     return (
       <div id="big-container">
@@ -56,6 +56,8 @@ class NavBar extends React.Component {
           </ul>
         </li>
 
+
+
         <li>
           <div id="profile-avatar">
               <button onClick={this.handleDropDown} id="profile-picture" className="circle">{this.props.currentUser.username.charAt(0).toUpperCase()}</button>
@@ -81,6 +83,9 @@ class NavBar extends React.Component {
               </div>
           </div>
         </li>
+
+
+
       </div>
         <div id="line-boi" className="hide-line"></div>
       </div>
@@ -94,10 +99,3 @@ class NavBar extends React.Component {
 export default NavBar;
 
 
-/*
-top: 0;
-right: 0;
-left: 0;
-position: fixed,
-background-size: auto 100%;
-*/

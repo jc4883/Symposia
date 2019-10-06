@@ -20,10 +20,7 @@ class ShowProject extends React.Component {
     this.handleSchedule = this.handleSchedule.bind(this);
   }
 
-  handleDropdown() {
-    document.getElementById("show-dropdown").classList.toggle("show-show");
-  }
-  
+ 
   componentDidMount() {
     this.props.fetchProject(this.props.projectId);
   }
@@ -40,6 +37,12 @@ class ShowProject extends React.Component {
     this.props.history.push("/") 
   }
 
+
+
+  handleDropdown() {
+    document.getElementById("show-dropdown").classList.toggle("show-show");
+  }  
+
   render() {
     if (!this.props.project) {
       return null;
@@ -54,19 +57,37 @@ class ShowProject extends React.Component {
     return (
       <div id="show-project-div">
         <NavBar currentUser={this.props.currentUser} logout={this.props.logout} />
+
+
+
         <div id="show-project-container">
-          <div onClick={this.handleDropdown}>
-            <img id="show-more-project-show" src={window.show_more_project_show}/>
+          <div id="got-to-be-positioned">
+            <div onClick={this.handleDropdown}>
+              <img id="show-more-project-show" src={window.show_more_project_show}/>
+            </div>
+
+            <div id="show-dropdown" className="show-dropdown-content">
+                <div id="show-dropdown-close-container">
+                  <div id="show-dropdown-close" onClick={this.handleDropdown}> 
+                    <img src={window.project_show_dropdown}/>
+                  </div>
+                </div>
+              
+                <div id="project-show-edit">
+                  <img src={window.project_show_edit}/>
+                  <h4>Edit name, description, type</h4>
+                </div>
+                <div id="project-show-delete">
+                  <img src={window.project_show_delete}/>
+                  <h4>Delete this project</h4>
+                </div>
+            </div>
           </div>
 
-          <ul id="show-dropdown" className="show-dropdown-content">
-              <li onClick={this.handleDropdown}>
-                <img src={window.project_show_dropdown}/>
-              </li>
-              <li><h1>Hello</h1></li>
-              <li>Contact</li>
-              <li>Banana</li>
-          </ul>
+     
+
+
+
 
           <header id="show-project-header">
             <div className="project-name">{this.props.project.title}</div>
@@ -122,27 +143,6 @@ class ShowProject extends React.Component {
   }
 }
 
-/*
-
-
-
-
-      <div id="new-project-div">
-        <div id="new-project-container">
-          <NavBar currentUser={this.props.currentUser} logout={this.props.logout} />
-          <img id="new-project-symposia-logo" src={window.transparent_symposia_logo} />
-          <h2>All right, let's get your project started!</h2>
-          <form id="new-project-form">
-            <h3>Name this Project</h3>
-            <input autoFocus="autofocus" placeholder="e.g. Allegory of the Cave"  id="name-this-project" type="text"/>
-            <h3>Add an optional description</h3>
-            <textarea placeholder="e.g. Watch the process whereby the prisoners are set free from their chains." id="add-description" type="text"/>
-            <button onClick={this.handleSubmit} id="create-button">Create this project</button>
-          </form>
-        </div>
-      </div>
-*/
-
 
 
 const DropDown = ({}) => {
@@ -161,18 +161,3 @@ const DropDown = ({}) => {
 
 export default ShowProject;
 
-/* 
-            <li onClick={this.handleDropdown}>
-              <img id="project-show-dropdown-image" src={window.project_show_dropdown}/>
-            </li>
-
-            <li id="dropdown-delete-project">
-              <img src={window.project_show_delete}/>
-              <div>Delete this project</div>
-            </li>
-
-            <li id="dropdown-edit-project">
-              <img src={window.project_show_edit}/>
-              <div>Edit name, description, type</div>
-            </li>
-*/

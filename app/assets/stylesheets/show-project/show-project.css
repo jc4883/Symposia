@@ -114,38 +114,7 @@
   width: 75%;
 }
 
-/* project activity start */
 
-/*
-.project-activity-line {
-  width: 90%; 
-  text-align: center; 
-  border-bottom: 1px solid lightgrey; 
-  line-height: 0.1em;
-  margin: 10px 0 20px; 
-}
-
-#project-activity-show {
-  font-size: 24px;
-  margin: 0 auto;
-  max-width: 72rem;
-  font-weight: bold;
-  text-align: center;
-  color: #283c46;
-
-  background-color: #ffffff;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-#project-activity-line-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-}
-*/
-
-/* project activity end */
 #misc-info {
   font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
   color: #283c46;
@@ -176,41 +145,38 @@
   height: 539px;
 }
 
-.show-show {
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
-  background-color: #1b6ac9;
-  
-  transition:  .2s;
-  right: -330px;
-  top: -16px;
-  margin-right: 330px;
-  color: white;
+
+
+
+/* dropdown START */
+
+#got-to-be-positioned {
+  position: static;
 }
 
 .show-dropdown-content {
-  display: none;
+  display: block;
   position: absolute;
-  width: 260px;
-  height: 100px;
-
+  width: 0;
+  overflow: hidden;
+  height: 130px;
+  justify-content: left;
+  flex-direction: column;
+  background-color: #1b6ac9;
+  right: 0;
+  transition: all .2s ease;
 }
 
-
-  
-  /*
-    display: block;
-    position: absolute;
-    margin-left: 334px;
-    margin-top: -379px;
+.show-show {
     width: 260px;
-    height: 264px;
-    background-color: red;
-    opacity: 1;
-    transition: 1s;
-    */
+    display: block;
 }
+
+/* dropdown END */
+
+
+
+
 
 #project-show-dropdown-image {
   float: right;
@@ -229,13 +195,6 @@
   margin-right: 10px;
 }
 
-#show-dropdown {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 .todo_images {
   display: flex;
@@ -251,4 +210,56 @@
 #drop-ul li div {
   display: block;
   padding: 24px 14px;
+}
+
+#show-dropdown-close-container {
+  display: block;
+  float: right;
+  padding-top: 17px;
+  padding-right: 15px;
+  padding-left: 200px;
+}
+
+#project-show-edit {
+  width: 260px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 38px;
+  font-size: 10px;
+}
+
+#show-dropdown h4{
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: .4px;
+}
+
+#project-show-delete {
+  width: 260px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 38px;
+  font-size: 10px;
+
+  border-top: 1px solid black;
+  border-color: #1860b4;
+}
+
+#project-show-delete h4 {
+  margin-right: 10px;
+}
+
+#project-show-edit:hover {
+  background-color: rgba(20,80,150, 1);
+}
+
+#project-show-delete:hover {
+  background-color: rgba(20,80,150, 1);
+}
+#project-show-edit:hover {
+  background-color: rgba(20,80,150, 1);
 }

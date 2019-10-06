@@ -16,7 +16,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return ({
     logout: () => dispatch(logout()),
-    createProject: (project) => dispatch(updateProject(project)),
+    updateProject: (project) => dispatch(updateProject(project)),
     fetchProject: (id) => dispatch(fetchProject(id))
   })
 }

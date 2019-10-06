@@ -15,6 +15,7 @@ class NewProjectForm extends React.Component {
   }
 
   handleSubmit() {
+    debugger
     const title = document.getElementById("name-this-project").value;
     const description = document.getElementById("add-description").value;
     this.props.createProject({title: `${title}`, description: `${description}`, user_id: `${this.props.currentUser.id}`})
@@ -29,12 +30,12 @@ class NewProjectForm extends React.Component {
           <NavBar currentUser={this.props.currentUser} logout={this.props.logout} />
           <img id="new-project-symposia-logo" src={window.transparent_symposia_logo} />
           <h2>All right, let's get your project started!</h2>
-          <form id="new-project-form">
+          <form onSubmit={this.handleSubmit} id="new-project-form">
             <h3>Name this Project</h3>
-            <input autoFocus="autofocus" placeholder="e.g. Allegory of the Cave"  id="name-this-project" type="text"/>
+            <input autoFocus="autofocus" placeholder="e.g. Allegory of the Cave"  id="name-this-project" type="text" required/>
             <h3>Add an optional description</h3>
-            <textarea placeholder="e.g. Watch the process whereby the prisoners are set free from their chains." id="add-description" type="text"/>
-            <button onClick={this.handleSubmit} id="create-button">Create this project</button>
+            <textarea placeholder="e.g. Watch the process whereby the prisoners are set free from their chains." id="add-description" type="text" required/>
+            <button id="create-button">Create this project</button>
           </form>
         </div>
       </div>
