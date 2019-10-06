@@ -22,7 +22,6 @@ export const fetchProject = (id) => {
 }
 
 export const updateProject = (project) => {
-  debugger
   return $.ajax({
     method: "PATCH",
     url: `api/projects/${project.id}`,
@@ -31,7 +30,6 @@ export const updateProject = (project) => {
 }
 
 export const deleteProject = (id) => {
-  debugger
   return $.ajax({
     method: "DELETE",
     url: `api/projects/${id}`,

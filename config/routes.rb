@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy] 
-    resources :projects, only: [:index, :update,  :show, :create, :destroy]
+    resources :projects, only: [:index, :update,  :show, :create, :destroy] do 
+      resources :todo_lists, only: [:index, :update, :create]
+    end
+    resources :todo_lists, only: [:show, :destroy]
+    #next todos under todo_list or projects?
   end 
   post 'api/sessions/validate_username', to: 'api/sessions#validate_username', defaults: { format: :json } 
 end

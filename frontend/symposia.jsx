@@ -4,6 +4,8 @@ import configureStore from "./store/store";
 import Root from "./components/root";
 import * as sessionActions from './actions/session_actions';
 import * as projectsActions from './actions/project_actions';
+import * as todoListActions from './actions/todo_list_actions';
+import * as todoActions from './actions/todo_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -25,11 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
   window.dispatch = store.dispatch;
   window.sessionActions = sessionActions;
   window.projectsActions = projectsActions;
-  //createProject works 
-  //fetchPosts() works {0: {…}, 1: {…}, 2: {…}, 3: {…}}
-  //fetchPost(1) works {1: {…}}, adds an object to projects slice
-  //updatePost(post) works {2: {…}}, returns full projects slice
-  //deletePost(id) works, returns full projects slice
+  window.todoListActions = todoListActions;
+  window.todoActions = todoActions;
+  //createTodoList works
+  //fetchTodos works
+  //fetchTodo works
+  //updateTodo works
+  //destroyTodo works
   // TESTING END
 
   const root = document.getElementById("root");

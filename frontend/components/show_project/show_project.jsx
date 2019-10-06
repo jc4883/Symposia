@@ -26,7 +26,7 @@ class ShowProject extends React.Component {
   }
 
   handleTodo() {
-    this.props.history.push("/")
+    this.props.history.push(`/projects/${this.props.projectId}/todo_lists`)
   }
 
   handleSchedule(){
