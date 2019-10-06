@@ -1,14 +1,11 @@
-#big-edit-project-container {
+#big-delete-project-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  
 }
 
-
-
-#project-title-for-update {
+#project-title-for-delete {
   min-width: 860px;
   display: flex;
   justify-content: center;
@@ -22,13 +19,13 @@
   border-radius: 0.2em 0.2em 0 0;
 }
 
-#project-title-for-update div {
+#project-title-for-delete div {
   display: flex;
   flex-direction: row;  
   align-items: center;
 }
 
-#project-title-for-update div div {
+#project-title-for-delete div div {
   margin-bottom: 2px;
   color: #1b6ac9;
   text-decoration: underline;
@@ -37,15 +34,7 @@
   font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
 }
 
-/* Project-title nav END */
-/* Edit-project-div BEGIN */
-
-#new-project-form {
-  width: 72% !important;
-  margin-right: 18px;
-}
-
-#edit-project-div {
+#delete-project-div {
   min-width: 929px;
   display: flex;
   flex-direction: column;
@@ -60,75 +49,42 @@
   padding-bottom: 52vh;
 }
 
-#edit-project-div h2 {
+#delete-project-div h1 {
     text-align: center;
     width: 77%;
-    font-size: 2em;
+    font-size: 28px;
     letter-spacing: -0.5px;
     line-height: 1;
     padding-bottom: 15px;
     margin-bottom: 0;
     font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
     color: #283c46;
-    border-bottom: 3px solid #283c46; 
 }
 
-#new-project-form h3 {
-  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
-  color: #283c46;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 0;
-}
-
-#update-project-first-h3 {
-  margin-top: 26px;
-}
-
-#description-h3 {
-  margin-top: 22px;
-}
-
-#update-this-project {
-    background-color: #fff;
-    border: 1px solid #d9d9d9;
-    border-radius: 5px;
-    font-weight: 400;
-    line-height: 1.5;
-    font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+#delete-project-div p {
+      font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
     color: #283c46;
-    font-size: 16px;
-    padding: 7px 8px;
-    letter-spacing: .4px;
-    width: 100%;
+        line-height: 1.5;
+            font-size: 16px;
+            display: block;
+            width: 74%;
 }
 
-#update-description {
-    background-color: #fff;
-    border: 1px solid #d9d9d9;
-    border-radius: 5px;
-    font-weight: 400;
-    line-height: 1.5;
-    font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
-    color: #283c46;
-    font-size: 16px;
-    padding: 7px 8px;
-    resize: none;
-    height: 66px;
-    letter-spacing: .4px;
-    width: 100%;
+#highlight-project-title {
+  background-color: #ffea9a;
+  margin-left: 3px;
+  padding: 0 0.2em;
+  border-radius: 4rem 2rem 4.2rem 1.1rem;
+  box-shadow: 0.2em 0 0 #ffea9a, -0.2em 0 0 #ffea9a;
 }
 
-.update-button {
-  background-color: #2da562;
-  border-color: #2da562;
-  color: #fff;
+#delete-button {
   padding-top: 2px;
   padding-left: 3px;
   border-radius: 1.5em;
   font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
   font-size: 16px;
-  width: 141px;
+  width: 174px;
   height: 43px;
   display: block;
   margin: 19px 0;
@@ -136,4 +92,8 @@
   position: relative;
   left: 0;
   outline: none;
+  background-color: #fcf2f1;
+  border-color: #d4442e;
+  color: #d4442e;
+  margin-bottom: 211px;
 }

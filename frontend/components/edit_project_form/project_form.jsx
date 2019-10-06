@@ -10,7 +10,7 @@ class ProjectForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state =  Object.assign(this.props.project, {toProjectShow: false});
     this.title = this.props.project.title;
-    this.handleHistoryPush = this.handleRedirect.bind(this);
+    this.handleRedirect = this.handleRedirect.bind(this);
   }
 
   updateField(field) {
@@ -20,6 +20,8 @@ class ProjectForm extends React.Component {
   }
 
   handleRedirect() {
+
+    debugger
     this.setState({toProjectShow: true});
   }
 
@@ -27,7 +29,8 @@ class ProjectForm extends React.Component {
     e.preventDefault();
     const title = document.getElementById("update-this-project").value;
     const description = document.getElementById("update-description").value;
-    this.props.updateProject({ title: `${title}`, description: `${description}`, user_id: `${this.props.currentUser.id}` })
+    debugger
+    this.props.updateProject({id: `${this.props.project.id}`, title: `${title}`, description: `${description}`, user_id: `${this.props.currentUser.id}` })
       .then(this.setState({toProjectShow: true}))
   }
 

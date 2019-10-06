@@ -13,6 +13,7 @@ class ProjectIndexItem extends React.Component {
   } 
 
   handleClick() {
+    debugger
     this.setState({toProjectShow: true});
   }
 
@@ -21,8 +22,10 @@ class ProjectIndexItem extends React.Component {
   }
   render() {
     if (this.state.toProjectEdit){
+      debugger
       return <Redirect to={`/projects/${this.props.project.id}/edit`}/>;
     } else if (this.state.toProjectShow === true) {
+      debugger
       return <Redirect to={`/projects/${this.props.project.id}`}/>
     } 
 

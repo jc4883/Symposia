@@ -20,13 +20,15 @@ class ProjectIndex extends React.Component {
 
   render() {
     let projects = Object.values(this.props.projects);  
+    //we're not retrieve the created_at.
+    //let sortedProjects = projects.sort((a, b) => b.created_at - a.created_at)
     return (
       <div id="project-index">
         <NavBar currentUser={this.props.currentUser} logout={this.props.logout}/>
         <div id="your-projects">Your Projects</div>
         <ul id="project-index-items">
-          {projects.slice(0).reverse().map((project) => {
-            return <ProjectIndexItem key={project.id} project={project} /> 
+          {projects.slice(0).reverse().map((project, index) => {
+            return <ProjectIndexItem key={index} project={project} /> 
           })}
           <ProjectIndexCreator />
         </ul>

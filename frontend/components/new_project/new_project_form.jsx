@@ -14,8 +14,8 @@ class NewProjectForm extends React.Component {
     window.scrollTop = 0;
   }
 
-  handleSubmit() {
-    debugger
+  handleSubmit(e) {
+    e.preventDefault();
     const title = document.getElementById("name-this-project").value;
     const description = document.getElementById("add-description").value;
     this.props.createProject({title: `${title}`, description: `${description}`, user_id: `${this.props.currentUser.id}`})
@@ -34,7 +34,7 @@ class NewProjectForm extends React.Component {
             <h3>Name this Project</h3>
             <input autoFocus="autofocus" placeholder="e.g. Allegory of the Cave"  id="name-this-project" type="text" required/>
             <h3>Add an optional description</h3>
-            <textarea placeholder="e.g. Watch the process whereby the prisoners are set free from their chains." id="add-description" type="text" required/>
+            <textarea placeholder="e.g. Watch the process whereby the prisoners are set free from their chains." id="add-description" type="text"/>
             <button id="create-button">Create this project</button>
           </form>
         </div>

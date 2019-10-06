@@ -8,6 +8,7 @@ class ShowProject extends React.Component {
 
   constructor(props) {
     super(props);
+    debugger
     this.monthNames = [
       "January", "February", "March",
       "April", "May", "June", "July",
@@ -18,8 +19,19 @@ class ShowProject extends React.Component {
     this.handleTodo = this.handleTodo.bind(this);
     this.handleDocs = this.handleDocs.bind(this);
     this.handleSchedule = this.handleSchedule.bind(this);
+    this.handleEditClick = this.handleEditClick.bind(this);
+    this.handleDeleteClick = this.handleDeleteClick.bind(this);
   }
 
+  handleEditClick() {
+    debugger
+    this.props.history.push(`/projects/${this.props.project.id}/edit`);
+  }
+
+  handleDeleteClick() {
+    debugger
+    this.props.history.push(`/projects/${this.props.project.id}/status`);
+  }
  
   componentDidMount() {
     this.props.fetchProject(this.props.projectId);
@@ -44,6 +56,7 @@ class ShowProject extends React.Component {
   }  
 
   render() {
+    debugger;
     if (!this.props.project) {
       return null;
     }
@@ -73,11 +86,11 @@ class ShowProject extends React.Component {
                   </div>
                 </div>
               
-                <div id="project-show-edit">
+                <div onClick={this.handleEditClick} id="project-show-edit">
                   <img src={window.project_show_edit}/>
                   <h4>Edit name, description, type</h4>
                 </div>
-                <div id="project-show-delete">
+                <div onClick={this.handleDeleteClick} id="project-show-delete">
                   <img src={window.project_show_delete}/>
                   <h4>Delete this project</h4>
                 </div>
