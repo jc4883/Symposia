@@ -15,7 +15,6 @@ class NewProjectForm extends React.Component {
   }
 
   handleSubmit() {
-    debugger
     const title = document.getElementById("name-this-project").value;
     const description = document.getElementById("add-description").value;
     this.props.createProject({title: `${title}`, description: `${description}`, user_id: `${this.props.currentUser.id}`})

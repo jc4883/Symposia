@@ -8,7 +8,15 @@ Rails.application.routes.draw do
       resources :todo_lists, only: [:index, :update, :create]
     end
     resources :todo_lists, only: [:show, :destroy]
-    #next todos under todo_list or projects?
+
+    #don't want other routes for todo_lists other than those nested under projects
+    resources :todo_lists, only: [] do
+        resources :todo, only: [:index, :update, :create]
+    end
+    resources :todo, only: [:show, :destroy]
+
+    
+
   end 
   post 'api/sessions/validate_username', to: 'api/sessions#validate_username', defaults: { format: :json } 
 end

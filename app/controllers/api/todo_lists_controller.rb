@@ -1,9 +1,7 @@
 class Api::TodoListsController < ApplicationController
   def index
-    debugger
     project = Project.find_by(id: params[:project_id])
     @todo_lists = project.todo_lists
-    debugger
     render "api/todo_lists/index"
   end
 

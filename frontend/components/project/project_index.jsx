@@ -25,8 +25,8 @@ class ProjectIndex extends React.Component {
         <NavBar currentUser={this.props.currentUser} logout={this.props.logout}/>
         <div id="your-projects">Your Projects</div>
         <ul id="project-index-items">
-          {projects.slice(0).reverse().map((project) => {
-            return <ProjectIndexItem key={project.id} project={project} /> 
+          {projects.slice(0).reverse().map((project, key) => {
+            return <ProjectIndexItem key={key} project={project} /> 
           })}
           <ProjectIndexCreator />
         </ul>

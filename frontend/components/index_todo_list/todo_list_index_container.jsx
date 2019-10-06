@@ -2,7 +2,8 @@ import React from 'react';
 import TodoListIndex from './todo_list_index';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions'
-import { fetchTodoLists } from '../../actions/todo_list_actions';
+import { fetchTodoLists, createTodoList } from '../../actions/todo_list_actions';
+
 
 
 const mapStateToProp = (state, ownProps) => {
@@ -16,6 +17,7 @@ const mapStateToProp = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return ({
     logout: () => dispatch(logout()),
+    createTodoList: (todo_list) => dispatch(createTodoList(todo_list)),
     fetchTodoLists: (project_id) => dispatch(fetchTodoLists(project_id))
   })
 }
