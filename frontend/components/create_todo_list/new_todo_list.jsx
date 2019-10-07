@@ -10,7 +10,6 @@ class NewTodoList extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    
     const title = document.getElementById("name-this-list").value;
     const description = document.getElementById("describe-this-list").value;
     const todoList = {title: `${title}`, description: `${description}`, project_id: `${this.props.projectId}` }

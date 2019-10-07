@@ -1,23 +1,24 @@
 import React from 'react';
 import NewTodoList from '../create_todo_list/new_todo_list';
+import TodoListIndexItem from '../todo_list_index_item/todo_list_index_item';
 
-class TodoListIndex extends React.Component {
+class TodoListIndex extends React.Component { 
   componentDidMount() {
-    this.props.fetchTodoLists(this.props.projectId);
+    this.props.fetchTodoLists(this.props.projectId); 
   }
+
   render() {
-    if (!this.props.todoLists) {
+    if (Object.keys(this.props.todoLists).length === 0) {
       return null;
     }
-    
-
-   // let todoLists = Object.values(this.props.todoLists);
-
+    let todoLists = Object.values(this.props.todoLists);
     return (
       <div>
-        I'm HERE.
+        TODO LIST INDEX
         <NewTodoList projectId={this.props.projectId} createTodoList={this.props.createTodoList} history={this.props.history} />
-
+        {todoLists.map((todoList) => {
+          return <TodoListIndexItem todoList={todoList} key={todoList.id}/>; 
+        })}
       </div>
     )
   }

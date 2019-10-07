@@ -26,8 +26,8 @@ const removeTodo = (id) => {
   })
 }
 
-export const fetchTodos = () => dispatch => {
-  return Todo_API.fetchTodos().then(todos => {
+export const fetchTodos = (project_id) => dispatch => {
+  return Todo_API.fetchTodos(project_id).then(todos => {
     return dispatch(receiveTodos(todos));
   })
 }

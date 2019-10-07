@@ -6,7 +6,7 @@ class TodoList < ApplicationRecord
   class_name: :Project
 
   has_many :todos,
-  foreign_key: :todolist_id,
+  foreign_key: :todo_list_id,
   class_name: :Todo
 
 

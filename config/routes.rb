@@ -11,9 +11,9 @@ Rails.application.routes.draw do
 
     #don't want other routes for todo_lists other than those nested under projects
     resources :todo_lists, only: [] do
-        resources :todo, only: [:index, :update, :create]
+        resources :todos, only: [:index, :update, :create]
     end
-    resources :todo, only: [:show, :destroy]
+    resources :todos, only: [:show, :destroy]
 
     
 

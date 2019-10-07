@@ -1,14 +1,16 @@
-export const fetchTodos = () => {
+export const fetchTodos = (todo_list_id) => {
   return $.ajax({
     method: "GET",
-    url: "api/todos"
+    url: `api/todo_lists/${todo_list_id}/todos`
   })
 }
+
+
 
 export const createTodo = (todo) => {
   return $.ajax({
     method: "POST",
-    url: "api/todos",
+    url: `api/todo_lists/${todo.todo_list_id}/todos`,
     data: { todo }
   })
 }
@@ -24,7 +26,7 @@ export const fetchTodo = (id) => {
 export const updateTodo = (todo) => {
   return $.ajax({
     method: "PATCH",
-    url: `api/todos/${todo.id}`,
+    url: `api/todo_lists/${todo.todo_list_id}/todo/${todo.id}`,
     data: { todo }
   })
 }
