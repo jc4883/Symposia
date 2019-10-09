@@ -46,7 +46,6 @@ class TodoListShow extends React.Component {
   }
 
   goToTodoShow(todoId) {
-    debugger
     const projectId = this.props.match.params.projectId;
     const todoListId = this.props.match.params.todoListId;
     return () => this.props.history.push(`/projects/${projectId}/todo_lists/${todoListId}/todos/${todoId}`)
@@ -59,12 +58,10 @@ class TodoListShow extends React.Component {
   }
 
   handleTitleChange(e) {
-    debugger
     this.setState({ newTodoTitle: e.target.value })
   }
 
   handleDescriptionChange(e) {
-    debugger
     this.setState({ newTodoDescription: e.target.value })
   }
 
@@ -116,19 +113,16 @@ class TodoListShow extends React.Component {
 
     let todoAddVisible;
     if (this.state.todoAddVisible) {
-      debugger
       
       todoAddVisible = "show-add-a-todo-button-list-show-class";
     } else {
-      debugger
       todoAddVisible = "hidden-add-a-todo-button-list-show-class";
-    } debugger
+    } 
     
     let todos = Object.values(this.props.todos);
     let listTodos = [];
     for (let i = 0; i < todos.length; i++) {
       if (todos[i].todo_list_id == this.props.todoListId) {
-        debugger
         listTodos.push(todos[i]);
       }
     }
@@ -152,7 +146,6 @@ class TodoListShow extends React.Component {
         this.state.completedTodos++;
       }
     }
-    debugger
     return (
         <div id="big-todo-list-show-container">
           <NavBar currentUser={this.props.currentUser} logout={this.props.logout}/>

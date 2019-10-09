@@ -16,8 +16,9 @@ class TodoListIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchTodoLists(this.props.projectId); 
-    this.props.fetchProject(this.props.projectId);
+    this.props.fetchProject(this.props.projectId)
+      .then(this.props.fetchTodoLists(this.props.projectId))
+    
   }
 
   handleRedirect() {
@@ -31,6 +32,8 @@ class TodoListIndex extends React.Component {
 
   render() {
     if (!this.props.project) {
+      return null;
+    } else if (!this.props.todoLists) {
       return null;
     }
     if (this.state.redirect) {

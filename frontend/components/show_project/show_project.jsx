@@ -20,6 +20,7 @@ class ShowProject extends React.Component {
     this.handleDocs = this.handleDocs.bind(this);
     this.handleSchedule = this.handleSchedule.bind(this);
     this.handleEditProject = this.handleEditProject.bind(this);
+    this.handleDeleteClick = this.handleDeleteClick.bind(this);
   }
 
   handleEditClick() {
@@ -82,9 +83,6 @@ class ShowProject extends React.Component {
     return (
       <div id="show-project-div">
         <NavBar currentUser={this.props.currentUser} logout={this.props.logout} />
-
-
-
         <div id="show-project-container">
 
           

@@ -52,6 +52,7 @@ export const updateTodoList = (todoList) => dispatch => {
 
 export const deleteTodoList = (id) => dispatch => {
   return TodoList_API.deleteTodoList(id).then(todoList => {
-    return dispatch(removeTodoList(todoList.id))
+    debugger
+    return dispatch(removeTodoList(Object.keys(todoList.todoList)[0]))
   })
 }

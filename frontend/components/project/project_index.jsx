@@ -19,6 +19,14 @@ class ProjectIndex extends React.Component {
   }
 
   render() {
+    if (!this.props.projects) {
+      return null;
+    } 
+    
+    /* else if (!this.props.todoLists) {
+      debugger
+      return null;
+    } */
     let projects = Object.values(this.props.projects);  
     //we're not retrieve the created_at.
     //let sortedProjects = projects.sort((a, b) => b.created_at - a.created_at)
