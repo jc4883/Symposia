@@ -1,0 +1,82 @@
+#big-todo-list-show-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#project-title-todo-list-show {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 37px;
+  height: 45px;
+  text-align: center;
+  width: 45%;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1), 0 10px 30px #f3ece8;
+  border-radius: 0.2em 0.2em 0 0;
+}
+
+#project-title-todo-list-show div {
+  display: flex;
+  flex-direction: row;  
+  align-items: center;
+}
+
+#first-h3-project {
+  padding-right: 3px;
+  padding-left: 3px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  color: #1b6ac9;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1em;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+}
+
+
+#second-h3-todo {
+  padding-right: 3px;
+  padding-left: 3px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  color: #1b6ac9;
+  text-decoration: underline;
+  font-weight: 300;
+  font-size: 1em;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+}
+
+/*  nav bar ends */
+
+#todo-list-show-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: 0 auto;
+  background-color: #ffffff;
+  width: 49%;
+  box-shadow: 0 -1px 10px rgba(0,0,0,0.05), 0 1px 4px rgba(0,0,0,0.1), 0 10px 30px #f3ece8;
+  border-radius: 0.2em 0.2em 0 0;
+  padding-top: 40px;
+  padding-bottom: 52vh; 
+  position: relative;
+  min-height: 394px;
+}
+
+#list-show-discussion {
+    font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+    color: #283c46;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+
+#fraction {
+  color: #6d6d6d;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-size: 16px;
+  margin-left: 34px;
+}

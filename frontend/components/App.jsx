@@ -30,8 +30,8 @@ const App = () => (
       <ProtectedRoute exact path="/projects/:projectId" component={ShowProjectContainer} />
       <ProtectedRoute exact path="/projects/:projectId/edit" component={EditProjectFormContainer} />
       <ProtectedRoute exact path="/projects/:projectId/todo_lists" component={TodoListIndexContainer}/>
-      <ProtectedRoute exact path="/todo_lists/:todoListId" component={TodoListShowContainer} />
-      <ProtectedRoute exact path="/todo_lists/:todoListId/todos/:todoId" component={TodoShowContainer} />
+      <ProtectedRoute exact path="/projects/:projectId/todo_lists/:todoListId" component={TodoListShowContainer} />
+      <ProtectedRoute exact path="/projects/:projectId/todo_lists/:todoListId/todos/:todoId" component={TodoShowContainer} />
     </Switch>
     
     

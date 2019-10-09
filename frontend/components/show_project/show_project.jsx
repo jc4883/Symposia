@@ -18,11 +18,22 @@ class ShowProject extends React.Component {
     this.handleTodo = this.handleTodo.bind(this);
     this.handleDocs = this.handleDocs.bind(this);
     this.handleSchedule = this.handleSchedule.bind(this);
+    this.handleEditProject = this.handleEditProject.bind(this);
   }
 
  
   componentDidMount() {
     this.props.fetchProject(this.props.projectId);
+  }
+
+  componentDidUpdate() {
+    if (!this.props.project.created_at) {
+      this.props.fetchProject(this.props.projectId)
+    }
+  }
+
+  handleEditProject() {
+    this.props.history.push(`/projects/${this.props.projectId}/edit`)
   }
 
   handleTodo() {
@@ -47,6 +58,9 @@ class ShowProject extends React.Component {
     if (!this.props.project) {
       return null;
     }
+    if (!this.props.project.created_at) {
+      return null;
+    }
     let dateStr = this.props.project.created_at;
     dateStr = dateStr.slice(0, -1);
     let date = new Date(dateStr);
@@ -61,6 +75,8 @@ class ShowProject extends React.Component {
 
 
         <div id="show-project-container">
+
+          
           <div id="got-to-be-positioned">
             <div onClick={this.handleDropdown}>
               <img id="show-more-project-show" src={window.show_more_project_show}/>
@@ -73,8 +89,8 @@ class ShowProject extends React.Component {
                   </div>
                 </div>
               
-                <div id="project-show-edit">
-                  <img src={window.project_show_edit}/>
+              <div onClick={this.handleEditProject} id="project-show-edit">
+                  <img  src={window.project_show_edit}/>
                   <h4>Edit name, description, type</h4>
                 </div>
                 <div id="project-show-delete">

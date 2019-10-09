@@ -26,7 +26,7 @@ export const fetchTodo = (id) => {
 export const updateTodo = (todo) => {
   return $.ajax({
     method: "PATCH",
-    url: `api/todo_lists/${todo.todo_list_id}/todo/${todo.id}`,
+    url: `api/todo_lists/${todo.todo_list_id}/todos/${todo.id}`,
     data: { todo }
   })
 }

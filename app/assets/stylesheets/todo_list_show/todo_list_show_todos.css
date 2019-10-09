@@ -1,0 +1,104 @@
+#todo-list-show-div {
+  display: block;
+  padding-left: 120px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#todo-list-show-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#todo-list-show-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/* Header complete */
+
+#todo-list-show-div ul {
+  display: block;
+  list-style: none;
+  padding-left: 26px;
+  margin-bottom: 0px;
+  margin-top: 0;
+}
+
+#todo-list-show-div ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+#todo-list-show-div ul li h3 {
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-size: 16px;
+  color: #283c46;
+  font-weight: 400;
+  padding-left: 7px;
+  padding-bottom: 4px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Add a todo button START */
+
+
+.hidden-add-a-todo-button-list-show-class {
+  display: none;
+  margin-left: 27px;
+}
+
+.show-add-a-todo-button-list-show-class {
+  display: block;
+}
+
+
+/* Add a todo button END */
+
+
+#todo-list-item-title-second-img {
+  margin-right: 7px;
+  margin-bottom: 3px;
+}
+
+#todo-list-show-title h1 {
+  margin-top: 0;
+  margin-left: 2px;
+  color: #283c46;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  font-size: 32px;  
+}
+
+#todo-list-show-header h2 {
+  font-size: 16px;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  color: #283c46;
+  font-weight: 400;
+  margin-top: -10px;
+  margin-bottom: 23px;
+  padding-left: 27px;
+}
+
+#show-todo-creator-list-show {
+  padding-left: 27px;
+  padding-top: 3px;
+  padding-bottom: 10px;
+}
+
+
+#todo-list-show-title-second-img {
+  margin-bottom: 18px;
+}
+
+#margin-right-list-show {
+  float: left;
+  position: relative;
+    right: 22px;
+}
+
+

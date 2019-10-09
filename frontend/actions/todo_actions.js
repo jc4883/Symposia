@@ -3,7 +3,14 @@ import * as Todo_API from '../util/todo_util';
 export const RECEIVE_TODO = 'RECEIVE_TODO';
 export const REMOVE_TODO = 'REMOVE_TODO';
 export const RECEIVE_ALL_TODOS = 'RECEIVE_ALL_TODOS';
+export const UPDATE_TODO = "UPDATE_TODO";
 
+const receiveTodoOnUpdate = (todo) => {
+  return ({
+  type: UPDATE_TODO,
+  todo
+  })
+}
 
 const receiveTodos = (todos) => {
   return ({
@@ -46,7 +53,7 @@ export const createTodo = (todo) => dispatch => {
 
 export const updateTodo = (todo) => dispatch => {
   return Todo_API.updateTodo(todo).then(todo => {
-    return dispatch(receiveTodo(todo))
+    return dispatch(receiveTodoOnUpdate(todo))
   })
 }
 

@@ -9,7 +9,8 @@ class TodoListIndexItemNewTodo extends React.Component {
   constructor(props) {
     super(props);
     this.handleForm = this.handleForm.bind(this);
-    //this.state = {redirect: false};
+    this.handleCancel = this.handleCancel.bind(this);
+    this.state = {newTodoFormClose: false}
   }
 
   handleForm(e) {
@@ -17,22 +18,44 @@ class TodoListIndexItemNewTodo extends React.Component {
     const title = document.getElementById("new-todo-title").value;
     const description = document.getElementById("new-todo-description").value;
     const newTodo = { title: `${title}`, description: `${description}`, done: "false", todo_list_id: `${this.props.todoList.id}` }
+    this.handleCancel = this.handleCancel.bind(this);
     this.props.createTodo(newTodo);
+  }
+
+  handleCancel() {
+    //if (this.props.handleListShowCancel === "true") {
+    //  document.getElementById("add-a-todo-button-list-show").classList.remove("show-add-a-todo-button-list-show-class")
+    //} 
+    //else {
+    //  document.getElementById("add-a-todo-button").classList.remove("show-add-a-todo-button-class")
+    //}
+    this.setState({newTodoFormVisible: false})
+    
   }
 
   render() {
 
-    // if (this.state.redirect) {
-    //   return <Redirect to={`/projects/${this.props.todoList.project_id}/todo_lists`}/>
-    // }
-
-
     return (
-      <form onSubmit={this.handleForm}>
-        <input id="new-todo-title" className="create-todo-title" type="text"/>
-        <input id="new-todo-description" className="create-todo-description" type="text"/>
-        <button>Add this todo</button>
-      </form>
+      <div className="big-new-todo-div">
+        <form autoComplete="off">
+          <header id="new-todo-header">
+            <input placeholder="Describe this todo..." id="new-todo-title" className="create-todo-title" type="text"/>
+          </header>
+          <section>
+            <input placeholder="Add extra details..." id="new-todo-description" className="create-todo-description" type="text"/>
+          </section>
+
+          <div id="new-todo-form-buttons">
+            <div id="add-todo-button" onClick={this.handleForm}>
+              <img src={window.add_this_todo} />
+            </div>
+            <div id="cancel-todo-button" onClick={this.handleCancel}>
+              <img src={window.cancel_new_list_button} />
+            </div>
+          </div>
+
+        </form>
+      </div>
     )
   }
   

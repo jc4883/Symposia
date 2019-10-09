@@ -1,0 +1,68 @@
+
+.big-new-todo-div {
+  margin-top: 42px;
+  height: 140px;
+  max-width: 690px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+
+.new-todo-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#new-todo-title {
+    background-color: rgba(255,255,255,0);
+    box-shadow: none !important;
+    border: 0;
+    outline: 0;
+    cursor: text;
+    width: 632px;
+    font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+    color: #283c46;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#new-todo-description {
+    box-shadow: none !important;
+    color: #283c46;
+    background-color: rgba(255,255,255,0);
+    box-shadow: none !important;
+    font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    outline: 0;
+    border: 0;
+    width: 632px;
+}
+
+.new-todo-form header {
+  border-bottom: 1px solid #DCDCDC;
+}
+
+#add_todo_button {
+  width: 108px;
+  margin-left: -10px;
+}
+
+#cancel-todo-button {
+  width: 81px;
+}
+
+#new-todo-form-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 18px;
+}
+
+header {
+  border-bottom: 1px solid #DCDCDC;
+}
