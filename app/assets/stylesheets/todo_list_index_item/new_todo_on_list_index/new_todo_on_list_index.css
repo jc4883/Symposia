@@ -9,7 +9,14 @@
   align-items: center;
   border: 1px solid lightgrey;
   border-radius: 5px;
+  padding-right: 0;
 }
+
+#add-a-todo-button-list-show {
+  width: 100%;
+
+}
+
 
 
 .new-todo-form {

@@ -90,9 +90,12 @@ class TodoListIndexItem extends React.Component {
     }
 
     let todoAddVisible;
+    let buttonVisible;
     if (this.state.todoAddVisible) {
+      buttonVisible = "hide";
       todoAddVisible = "show-add-a-todo-button-class";
     } else {
+      buttonVisible = "";
       todoAddVisible = "hidden-add-a-todo-button-class";
     }
 
@@ -159,7 +162,7 @@ class TodoListIndexItem extends React.Component {
             </li>
           })}
         </ul>
-        <div id="show-todo-creator" onClick={this.handleAddTodoButton}>
+        <div className={buttonVisible} id="show-todo-creator" onClick={this.handleAddTodoButton}>
           <img src={window.add_a_todo_button}/>
         </div>
         <ul>

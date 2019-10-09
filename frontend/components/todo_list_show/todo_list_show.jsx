@@ -53,7 +53,9 @@ class TodoListShow extends React.Component {
   }
 
   handleCancel() {
-    this.setState({ todoAddVisible: false })
+    document.getElementById("show-todo-creator-list-show").classList.remove("hide-boi");
+    this.setState({ todoAddVisible: false });
+    
   }
 
   handleTitleChange(e) {
@@ -68,6 +70,7 @@ class TodoListShow extends React.Component {
 
   handleAddTodoButton() {
     this.setState({ todoAddVisible: true })
+    document.getElementById("show-todo-creator-list-show").classList.add("hide-boi")
     //how to hide and get back? document.getElementById() only chooses one.
   }
 
@@ -89,7 +92,7 @@ class TodoListShow extends React.Component {
 
   handleForm(e) {
     e.preventDefault();
-    debugger
+    document.getElementById("show-todo-creator-list-show").classList.remove("hide-boi");
     const title = this.state.newTodoTitle;
     const description = this.state.newTodoDescription;
     const newTodo = { title: `${title}`, description: `${description}`, done: "false", todo_list_id: `${this.props.todoList.id}` }
@@ -106,6 +109,8 @@ class TodoListShow extends React.Component {
     //   return null;
     // }
     if (!this.props.project) {
+      return null;
+    } else if (!this.props.todoList) {
       return null;
     }
 
