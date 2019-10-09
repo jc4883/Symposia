@@ -8,7 +8,6 @@ class ShowProject extends React.Component {
 
   constructor(props) {
     super(props);
-    debugger
     this.monthNames = [
       "January", "February", "March",
       "April", "May", "June", "July",
@@ -24,12 +23,10 @@ class ShowProject extends React.Component {
   }
 
   handleEditClick() {
-    debugger
     this.props.history.push(`/projects/${this.props.project.id}/edit`);
   }
 
   handleDeleteClick() {
-    debugger
     this.props.history.push(`/projects/${this.props.project.id}/status`);
   }
  
@@ -66,7 +63,6 @@ class ShowProject extends React.Component {
   }  
 
   render() {
-    debugger;
     if (!this.props.project) {
       return null;
     }

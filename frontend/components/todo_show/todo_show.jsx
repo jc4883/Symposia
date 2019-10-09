@@ -41,9 +41,7 @@ class TodoShow extends React.Component {
 
   handleForm(e) {
     e.preventDefault();
-    debugger
     let newTodo = Object.assign(this.props.todo, {description: this.state.note, title: this.state.title})
-    debugger
     this.props.updateTodo(newTodo);
     document.getElementById("todo-show-nav").classList.remove("center-checkbox")
 
@@ -65,7 +63,6 @@ class TodoShow extends React.Component {
   }
 
   handleTitleChange(e) {
-    debugger
     this.setState({title: e.target.value});
   }
 
@@ -76,7 +73,6 @@ class TodoShow extends React.Component {
   editFormVisible() {
     let clickable = document.getElementById("todo-show-notes-clickable");
     let titleVal = document.getElementById("right-of-image-h1").innerHTML;
-    debugger
     let noteVal = clickable.innerHTML;
     if (noteVal === "Add extra details...") {
       noteVal = "";
@@ -95,7 +91,6 @@ class TodoShow extends React.Component {
   }
 
   updateChecked() {
-    debugger
     if (this.props.todo.done === "true") {
       let newTodo = Object.assign({}, this.props.todo)
       newTodo.done = "false";

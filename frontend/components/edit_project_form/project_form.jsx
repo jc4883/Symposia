@@ -23,7 +23,6 @@ class ProjectForm extends React.Component {
 
   handleRedirect() {
 
-    debugger
     this.setState({toProjectShow: true});
   }
 
@@ -31,7 +30,6 @@ class ProjectForm extends React.Component {
     e.preventDefault();
     const title = document.getElementById("update-this-project").value;
     const description = document.getElementById("update-description").value;
-    debugger
     this.props.updateProject({id: `${this.props.project.id}`, title: `${title}`, description: `${description}`, user_id: `${this.props.currentUser.id}` })
       .then(this.setState({toProjectShow: true}))
   }

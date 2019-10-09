@@ -26,9 +26,7 @@ const todoListsReducer = (state = {}, action) => {
       return Object.assign({}, state, {[Object.keys(action.todoList.todoList)[0]] : Object.values(action.todoList.todoList)[0]});
     case REMOVE_TODO_LIST:
       let newState = Object.assign({}, state);
-      debugger
       delete newState[action.todoListId];
-      debugger
       return newState;      
     default:
         return state;

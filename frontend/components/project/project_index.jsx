@@ -23,8 +23,7 @@ class ProjectIndex extends React.Component {
       return null;
     } 
     
-    /* else if (!this.props.todoLists) {
-      debugger
+    /* else if (!this.props.todoLists)  F{
       return null;
     } */
     let projects = Object.values(this.props.projects);  

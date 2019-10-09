@@ -14,7 +14,6 @@ class DeleteForm extends React.Component {
   }
 
   handleSubmit() {
-    debugger;
     this.props.deleteProject(this.props.project.id)
       .then(this.setState({toProjectIndex: true}));
   }

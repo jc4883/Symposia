@@ -19,7 +19,6 @@ class TodoListIndexItem extends React.Component {
 
   handleAddTodoButton() {
     //document.getElementById("add-a-todo-button").classList.add("show-add-a-todo-button-class")
-    debugger
     this.setState({todoAddVisible: true})
     
 
@@ -36,12 +35,10 @@ class TodoListIndexItem extends React.Component {
 
 
   handleTitleChange(e) {
-    debugger
     this.setState({ newTodoTitle: e.target.value })
   }
 
   handleDescriptionChange(e) {
-    debugger
     this.setState({ newTodoDescription: e.target.value })
   }
 

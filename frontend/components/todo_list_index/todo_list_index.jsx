@@ -41,7 +41,6 @@ class TodoListIndex extends React.Component {
     }
     let lists = Object.values(this.props.todoLists);
     let todoLists = [];
-    debugger
     for (let i = 0; i < lists.length; i++) {
       if (lists[i].project_id == this.props.projectId) {
         todoLists.push(lists[i]);
