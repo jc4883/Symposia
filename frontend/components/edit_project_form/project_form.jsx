@@ -10,7 +10,9 @@ class ProjectForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state =  Object.assign(this.props.project, {toProjectShow: false});
     this.title = this.props.project.title;
+    this.handleHistoryPush = this.handleRedirect.bind(this);
     this.handleRedirect = this.handleRedirect.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   updateField(field) {

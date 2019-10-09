@@ -1,0 +1,88 @@
+#big-todo-list-index-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#project-title-todo-list-index {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 37px;
+  height: 45px;
+  text-align: center;
+  width: 45%;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1), 0 10px 30px #f3ece8;
+  border-radius: 0.2em 0.2em 0 0;
+}
+
+#project-title-todo-list-index div {
+  display: flex;
+  flex-direction: row;  
+  align-items: center;
+}
+
+#project-title-todo-list-index div div {
+  margin-bottom: 2px;
+  color: #1b6ac9;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1em;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+}
+/* Nav Bar Ends */
+/* todo list index div begins */
+
+#todo-list-index-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: 0 auto;
+  background-color: #ffffff;
+  width: 49%;
+  box-shadow: 0 -1px 10px rgba(0,0,0,0.05), 0 1px 4px rgba(0,0,0,0.1), 0 10px 30px #f3ece8;
+  border-radius: 0.2em 0.2em 0 0;
+  padding-top: 40px;
+  padding-bottom: 52vh; 
+  position: relative;
+  min-height: 394px;
+}
+
+#todo-h2 {
+    text-align: center;
+    width: 77%;
+    font-size: 2em;
+    letter-spacing: -0.5px;
+    line-height: 1;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+    font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+    color: #283c46;
+    border-bottom: 3px solid #283c46;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: 10px;
+}
+
+#new-list-button {
+  position: absolute;
+  left: 105px;
+  top: 67px;
+}
+
+/* Hidden new list boi START */
+
+.hidden-new-todo-list-class {
+  display: none;
+}
+
+.show-new-todo-list-class {
+  display: block;
+}
+
+/* Hidden new list boi END */
+
+
+
+

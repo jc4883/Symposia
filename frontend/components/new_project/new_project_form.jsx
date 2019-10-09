@@ -14,6 +14,7 @@ class NewProjectForm extends React.Component {
     window.scrollTop = 0;
   }
 
+
   handleSubmit(e) {
     e.preventDefault();
     const title = document.getElementById("name-this-project").value;
