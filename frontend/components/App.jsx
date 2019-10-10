@@ -10,6 +10,7 @@ import DeleteProjectFormContainer from './delete_project_form/delete_project_for
 import TodoListIndexContainer from './todo_list_index/todo_list_index_container';
 import TodoListShowContainer from './todo_list_show/todo_list_show_container';
 import TodoShowContainer from './todo_show/todo_show_container';
+import DocsIndexContainer from './docs_index/docs_index_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Splash from './splash/splash';
 import {
@@ -34,7 +35,7 @@ const App = () => (
       <ProtectedRoute exact path="/projects/:projectId/todo_lists" component={TodoListIndexContainer}/>
       <ProtectedRoute exact path="/projects/:projectId/todo_lists/:todoListId" component={TodoListShowContainer} />
       <ProtectedRoute exact path="/projects/:projectId/todo_lists/:todoListId/todos/:todoId" component={TodoShowContainer} />
-
+      <ProtectedRoute exact path="/projects/:projectId/docs" component={DocsIndexContainer} />
     </Switch>
     
     

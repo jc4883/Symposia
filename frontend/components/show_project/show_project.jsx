@@ -53,7 +53,8 @@ class ShowProject extends React.Component {
   }
 
   handleDocs() {
-    this.props.history.push("/") 
+    debugger
+    this.props.history.push(`/projects/${this.props.projectId}/docs`) 
   }
 
 

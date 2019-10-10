@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy] 
     resources :projects, only: [:index, :update,  :show, :create, :destroy] do 
       resources :todo_lists, only: [:index, :update, :create]
+      resources :photo_uploads,  only: [:index, :create]
     end
     resources :todo_lists, only: [:show, :destroy]
 
@@ -14,7 +15,7 @@ Rails.application.routes.draw do
         resources :todos, only: [:index, :update, :create]
     end
     resources :todos, only: [:show, :destroy]
-
+    
     
 
   end 
