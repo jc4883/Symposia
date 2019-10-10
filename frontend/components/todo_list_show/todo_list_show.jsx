@@ -70,7 +70,6 @@ class TodoListShow extends React.Component {
   }
 
   handleTitleUpdate(e) {
-    debugger
     this.setState({ title: e.target.value });
   }
 
@@ -114,7 +113,7 @@ class TodoListShow extends React.Component {
   }
 
   editFormVisible() {
-    debugger
+    
     let titleVal = document.getElementById("todolist-title-h1").innerHTML;
     let notesVal = document.getElementById("todo-list-show-nav-description").innerHTML;
     this.handleDropdown();
@@ -132,10 +131,8 @@ class TodoListShow extends React.Component {
   handleUpdateForm(e) {
     e.preventDefault();
     document.getElementById("header-of-header").classList.remove("hide-boi");
-    debugger
     document.getElementById("update-form-todo-list").classList.add("hide-boi")
     let newTodoList = Object.assign(this.props.todoList, {description: this.state.note, title: this.state.title})
-    debugger
     this.props.updateTodoList(newTodoList);
   }
 

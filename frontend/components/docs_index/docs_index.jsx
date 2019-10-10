@@ -15,7 +15,6 @@ class DocsIndex extends React.Component {
 
   fetchPhotoUploads() {
     //why no method?
-    debugger
     $.ajax({
       method: "GET",
       url: `/api/projects/${this.props.projectId}/photo_uploads`
@@ -25,7 +24,6 @@ class DocsIndex extends React.Component {
   }
 
   componentDidMount() {
-    debugger
     this.fetchPhotoUploads();
   }
 
@@ -33,7 +31,6 @@ class DocsIndex extends React.Component {
     // if (this.props.photo_uploads === undefined) {
     //   return null;
     // }
-    debugger
     return (
       <div>
       I'm Here
