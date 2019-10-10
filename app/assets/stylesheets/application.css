@@ -15,16 +15,6 @@
  */
 
 
-@import './splash.css';
-@import './login-page.css';
-@import './signup-page.css';
-@import './project-index.css';
-@import './show-project/show-project.css';
-@import './todo_list_index/todo_list_index.css';
-@import './todo_list_index/new_todo_list.css';
-@import './todo_list_index_item/todo_list_index_item.css';
-@import './todo_list_index_item/new_todo_on_list_index/new_todo_on_list_index.css';
-@import './todo_list_show/todo_list_show.css';
 
 html {
   scroll-behavior: smooth;
