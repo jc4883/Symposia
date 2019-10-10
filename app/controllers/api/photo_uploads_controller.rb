@@ -1,7 +1,10 @@
 class Api::PhotoUploadsController < ApplicationController
   def index 
+    debugger
     project = Project.find_by(id: params[:project_id]);
+    debugger
     @photo_uploads = project.photo_uploads
+    debugger
     render "api/photo_uploads/index"
   end
 

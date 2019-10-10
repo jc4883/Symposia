@@ -19,11 +19,7 @@ class TodoListIndexItem extends React.Component {
 
   handleAddTodoButton() {
     //document.getElementById("add-a-todo-button").classList.add("show-add-a-todo-button-class")
-    this.setState({todoAddVisible: true})
-    
-
-    //how to hide and get back? document.getElementById() only chooses one.
-    //document.getElementById("show-todo-creator").classList.add("hide")
+    this.setState({todoAddVisible: true, newTodoTitle: "", newTodoDescription: ""})
   }
 
   goToTodoShow(todoId) {
@@ -77,7 +73,7 @@ class TodoListIndexItem extends React.Component {
     //else {
     //  document.getElementById("add-a-todo-button").classList.remove("show-add-a-todo-button-class")
     //}
-    this.setState({ todoAddVisible: false })
+    this.setState({ todoAddVisible: false});
 
   }
 
@@ -183,10 +179,10 @@ class TodoListIndexItem extends React.Component {
           <div className="big-new-todo-div">
             <form autoComplete="off" onSubmit={this.handleForm}>
               <header id="new-todo-header">
-                <input onChange={this.handleTitleChange} id="new-todo-title" placeholder="Describe this todo..."  className="create-todo-title" type="text"/>
+                <input onChange={this.handleTitleChange} value={this.state.newTodoTitle} id="new-todo-title" placeholder="Describe this todo..."  className="create-todo-title" type="text"/>
               </header>
               <section>
-                <input onChange={this.handleDescriptionChange}  id="new-todo-description" placeholder="Add extra details..." className="create-todo-description" type="text" />
+                <input onChange={this.handleDescriptionChange}  value={this.state.newTodoDescription} id="new-todo-description" placeholder="Add extra details..." className="create-todo-description" type="text" />
               </section>
 
               <div id="new-todo-form-buttons">

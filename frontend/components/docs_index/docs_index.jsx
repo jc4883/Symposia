@@ -15,15 +15,18 @@ class DocsIndex extends React.Component {
 
   fetchPhotoUploads() {
     //why no method?
+    debugger
     $.ajax({
       method: "GET",
       url: `/api/projects/${this.props.projectId}/photo_uploads`
     }).then(photoUploads => {
+      debugger
       this.setState({photoUploads})
     })
   }
 
   componentDidMount() {
+    debugger
     this.fetchPhotoUploads();
   }
 
