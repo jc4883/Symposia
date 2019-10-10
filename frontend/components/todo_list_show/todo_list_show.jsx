@@ -8,7 +8,7 @@ class TodoListShow extends React.Component {
     super(props);
     this.handleAddTodoButton = this.handleAddTodoButton.bind(this);
     this.handleCheckingBox = this.handleCheckingBox.bind(this);
-    this.state = {totalTodos: 0, completedTodos: 0, newTodoTitle: "", newTodoDescription: "", todoAddVisible: false};
+    this.state = {title: "", note: "", totalTodos: 0, completedTodos: 0, newTodoTitle: "", newTodoDescription: "", todoAddVisible: false};
     this.handleTitleChange = this.handleTitleChange.bind(this);
     this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
     this.handleForm = this.handleForm.bind(this);
@@ -18,6 +18,11 @@ class TodoListShow extends React.Component {
     this.goToListIndex = this.goToListIndex.bind(this);
     this.handleDropdown = this.handleDropdown.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleTitleUpdate = this.handleTitleUpdate.bind(this);
+    this.handleDescriptionUpdate = this.handleDescriptionUpdate.bind(this);
+    this.handleUpdateForm = this.handleUpdateForm.bind(this);
+    this.editFormVisible = this.editFormVisible.bind(this);
+    this.handleCancelNewList = this.handleCancelNewList.bind(this);
   }
 
   handleDelete() {
@@ -53,8 +58,7 @@ class TodoListShow extends React.Component {
 
   handleCancel() {
     document.getElementById("show-todo-creator-list-show").classList.remove("hide-boi");
-    this.setState({ todoAddVisible: false });
-    
+    this.setState({ todoAddVisible: false, newTodoDescription: "", newTodoTitle: "" });
   }
 
   handleTitleChange(e) {
@@ -63,6 +67,15 @@ class TodoListShow extends React.Component {
 
   handleDescriptionChange(e) {
     this.setState({ newTodoDescription: e.target.value })
+  }
+
+  handleTitleUpdate(e) {
+    debugger
+    this.setState({ title: e.target.value });
+  }
+
+  handleDescriptionUpdate(e) {
+    this.setState({ note: e.target.value });
   }
 
   handleAddTodoButton() {
@@ -90,6 +103,7 @@ class TodoListShow extends React.Component {
   handleForm(e) {
     e.preventDefault();
     document.getElementById("show-todo-creator-list-show").classList.remove("hide-boi");
+    this.setState({ todoAddVisible: false, newTodoDescription: "", newTodoTitle: "" });
     const title = this.state.newTodoTitle;
     const description = this.state.newTodoDescription;
     const newTodo = { title: `${title}`, description: `${description}`, done: "false", todo_list_id: `${this.props.todoList.id}` }
@@ -99,12 +113,39 @@ class TodoListShow extends React.Component {
     //this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
   }
 
+  editFormVisible() {
+    debugger
+    let titleVal = document.getElementById("todolist-title-h1").innerHTML;
+    let notesVal = document.getElementById("todo-list-show-nav-description").innerHTML;
+    this.handleDropdown();
+    document.getElementById("header-of-header").classList.add("hide-boi");
+    //document.getElementById("update-form").classList.add("show-todo-show-edit-form");
+    document.getElementById("update-form-todo-list").classList.remove("hide-boi");
+    this.setState({title: titleVal, note: notesVal});
+  }
+
+  handleCancelNewList() {
+    document.getElementById("header-of-header").classList.remove("hide-boi");
+    document.getElementById("update-form-todo-list").classList.add("hide-boi");
+  }
+
+  handleUpdateForm(e) {
+    e.preventDefault();
+    document.getElementById("header-of-header").classList.remove("hide-boi");
+    debugger
+    document.getElementById("update-form-todo-list").classList.add("hide-boi")
+    let newTodoList = Object.assign(this.props.todoList, {description: this.state.note, title: this.state.title})
+    debugger
+    this.props.updateTodoList(newTodoList);
+  }
+
   render() {
     
 
     // if (Object.values(this.props.todos).length === 0) {
     //   return null;
     // }
+     
     if (!this.props.project) {
       return null;
     } else if (!this.props.todoList) {
@@ -146,6 +187,7 @@ class TodoListShow extends React.Component {
         this.state.completedTodos++;
       }
     }
+    
     return (
         <div id="big-todo-list-show-container">
           <NavBar currentUser={this.props.currentUser} logout={this.props.logout}/>
@@ -172,7 +214,23 @@ class TodoListShow extends React.Component {
 
 
         <div id="todo-list-show-div">
-          
+          <div id="update-form-todo-list" className="hide-boi">
+            <form onSubmit={this.handleUpdateForm}>
+              <div>
+                <input id="the-title-input-todolist-show" onChange={this.handleTitleUpdate} value={this.state.title} />
+              </div>
+              <div>
+                <textarea placeholder="Add extra details..." id="the-description-input-todolist-show" onChange={this.handleDescriptionUpdate} value={this.state.note}></textarea>
+              </div>
+              <div id="new-list-buttons">
+                <input type="image" src={window.save_changes} />
+                <div id="discard-change-image-list-show" onClick={this.handleCancelNewList}>
+                  <img src={window.discard_changes} />
+                </div>
+              </div>
+              
+            </form>
+          </div>
 
           
 
@@ -203,6 +261,7 @@ class TodoListShow extends React.Component {
 
           
           <div id="todo-list-show-header">
+            <div id="header-of-header">
               <div id="fraction">
                 {this.state.completedTodos}/{this.state.totalTodos}
                 &nbsp;
@@ -210,11 +269,11 @@ class TodoListShow extends React.Component {
               </div>
               <div id="todo-list-show-title">
                 <img id="todo-list-show-title-second-img" src={window.slightly_bigger_green_circle} />
-                <h1>{this.props.todoList.title}</h1>
+                <h1 id="todolist-title-h1">{this.props.todoList.title}</h1>
               </div>
 
               <h2 id="todo-list-show-nav-description">{this.props.todoList.description}</h2>
-              
+            </div>
 
 
 
@@ -250,21 +309,20 @@ class TodoListShow extends React.Component {
 
               
             <div id="add-a-todo-button-list-show" className={todoAddVisible}>
-
-
               <div className="big-new-todo-div">
-                <form autoComplete="off">
+                <form autoComplete="off" onSubmit={this.handleForm}>
                   <header id="new-todo-header">
-                    <input onChange={this.handleTitleChange} id="new-todo-title" placeholder="Describe this todo..." className="create-todo-title" type="text" />
+                    <input value={this.state.newTodoTitle} onChange={this.handleTitleChange} id="new-todo-title" placeholder="Describe this todo..." className="create-todo-title" type="text" />
                   </header>
                   <section>
-                    <input onChange={this.handleDescriptionChange} id="new-todo-description" placeholder="Add extra details..." className="create-todo-description" type="text" />
+                    <input value={this.state.newTodoDescription} onChange={this.handleDescriptionChange} id="new-todo-description" placeholder="Add extra details..." className="create-todo-description" type="text" />
                   </section>
 
                   <div id="new-todo-form-buttons">
-                    <div id="add-todo-button" onClick={this.handleForm}>
-                      <img src={window.add_this_todo} />
-                    </div>
+
+
+                    <input id="add-todo-button" type="image" src={window.add_this_todo}/>
+  
                     <div id="cancel-todo-button" onClick={this.handleCancel}>
                       <img src={window.cancel_new_list_button} />
                     </div>

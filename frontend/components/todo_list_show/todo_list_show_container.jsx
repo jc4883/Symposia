@@ -1,7 +1,7 @@
 import React from 'react';
 import TodoListShow from './todo_list_show';
 import { connect } from 'react-redux';
-import { fetchTodoList, deleteTodoList } from '../../actions/todo_list_actions';
+import { fetchTodoList, deleteTodoList, updateTodoList } from '../../actions/todo_list_actions';
 import { createTodo, updateTodo } from '../../actions/todo_actions';
 import { logout } from '../../actions/session_actions';
 import { fetchProject } from '../../actions/project_actions';
@@ -24,7 +24,8 @@ const mapDispatchToProps = (dispatch) => {
     createTodo: (todo) => dispatch(createTodo(todo)),
     fetchProject: (id) => dispatch(fetchProject(id)),
     updateTodo: (newTodo) => dispatch(updateTodo(newTodo)),
-    deleteTodoList: (id) => dispatch(deleteTodoList(id))
+    deleteTodoList: (id) => dispatch(deleteTodoList(id)),
+    updateTodoList: (todoList) => dispatch(updateTodoList(todoList)),
   })
 }
 

@@ -39,6 +39,7 @@
   padding-bottom: 4px;
   margin-top: 0;
   margin-bottom: 0;
+  overflow: hidden;
 }
 
 /* Add a todo button START */
@@ -94,3 +95,22 @@
   font-size: 12px;
   margin-left: 30px;
 }
+
+/*
+pie {
+    width: 5em;
+    height: 5em;
+    display: block;
+    border-radius: 50%;
+    background-color: green;
+    border: 2px solid green;
+    float: left;
+    margin: 1em;
+}
+
+.ten {
+    background-image:
+        linear-gradient(126deg, transparent 50%, white 50%),
+        linear-gradient(90deg, white 50%, transparent 50%);
+}
+*/

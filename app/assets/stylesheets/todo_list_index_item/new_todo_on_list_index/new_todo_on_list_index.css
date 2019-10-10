@@ -10,6 +10,8 @@
   border: 1px solid lightgrey;
   border-radius: 5px;
   padding-right: 0;
+  min-width: 691px;
+  background-color: #ffffff;
 }
 
 #add-a-todo-button-list-show {
@@ -62,12 +64,14 @@
 
 #cancel-todo-button {
   width: 81px;
+  padding-top: 7px;
 }
 
 #new-todo-form-buttons {
   display: flex;
   flex-direction: row;
   margin-top: 18px;
+  align-items: center;
 }
 
 header {

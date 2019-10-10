@@ -12,7 +12,8 @@
   margin-top: 37px;
   height: 45px;
   text-align: center;
-  width: 45%;
+  max-width: 848px;
+  width: 80%;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1), 0 10px 30px #f3ece8;
   border-radius: 0.2em 0.2em 0 0;
@@ -59,8 +60,8 @@
   justify-content: left;
   margin: 0 auto;
   background-color: #ffffff;
-  width: 930px;
-  
+  max-width: 930px;
+  width: 90%;
   box-shadow: 0 -1px 10px rgba(0,0,0,0.05), 0 1px 4px rgba(0,0,0,0.1), 0 10px 30px #f3ece8;
   border-radius: 0.2em 0.2em 0 0;
   padding-top: 40px;
@@ -91,6 +92,7 @@
   font-weight: bold;
   font-size: 28px;
   margin-bottom: 14px;
+  overflow: hidden;
 }
 
 #right-of-image h4 {
@@ -182,7 +184,7 @@
   display: flex;
   margin: 0 auto;
   flex-direction: row;
-
+  align-items: center;
 }
 
 #update-form-flex-row div {
@@ -253,9 +255,9 @@
 
 #first-child-got-to-be-positioned-todo {
   float: right;
-  padding-right: 15px;
-  position: relative;
-  bottom: 24px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
 

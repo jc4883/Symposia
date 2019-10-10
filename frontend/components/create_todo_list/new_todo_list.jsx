@@ -5,7 +5,15 @@ import { Link } from 'react-router-dom';
 class NewTodoList extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {name: "", description: ""};
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(field) {
+    return (e) => {
+      this.setState({[field] : e.target.value })
+    }
   }
 
   handleSubmit(e) {
@@ -17,6 +25,8 @@ class NewTodoList extends React.Component {
     const description = document.getElementById("describe-this-list").value;
     const todoList = {title: `${title}`, description: `${description}`, project_id: `${this.props.projectId}` }
     this.handleCancel();
+    this.state.name = "";
+    this.state.description = "";
     this.props.createTodoList(todoList)
       .then(this.props.history.push(`/projects/${this.props.projectId}/todo_lists`))
   }
@@ -26,21 +36,22 @@ class NewTodoList extends React.Component {
     //document.getElementById("show-todo-creator").classList.remove("hide")
   }
 
+
+
   render() {
     return (
       <div className="big-new-list-div">
-        <form className="new-list-form" autoComplete="off">
+        <form className="new-list-form" autoComplete="off" onSubmit={this.handleSubmit}>
           <header id="new-list-header">
-            <input  id="name-this-list" type="text" placeholder="Name this list..."/>
+            <input value={this.state.name} onChange={this.handleChange("name")} id="name-this-list" type="text" placeholder="Name this list..."/>
           </header>
           <section>
-            <input id="describe-this-list" type="text" placeholder="Add extra details"/>
+            <input value={this.state.description} onChange={this.handleChange("description")} id="describe-this-list" type="text" placeholder="Add extra details"/>
           </section>
 
           <div id="new-list-form-buttons">
-            <div id="add-list-button" onClick={this.handleSubmit}>
-              <img src={window.confirm_new_list_button}/>
-            </div>
+            <input id="add-list-button" type="image" src={window.confirm_new_list_button}/>
+       
             <div id="cancel-list-button" onClick={this.handleCancel}>  
               <img src={window.cancel_new_list_button}/>
             </div>

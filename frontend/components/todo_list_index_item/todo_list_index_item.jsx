@@ -64,7 +64,9 @@ class TodoListIndexItem extends React.Component {
     const description = this.state.newTodoDescription;
     const newTodo = { title: `${title}`, description: `${description}`, done: "false", todo_list_id: `${this.state.id}` }
     //this.handleCancel = this.handleCancel.bind(this);
+    debugger
     this.props.createTodo(newTodo);
+    this.handleCancel();
     //this.handleTitleChange = this.handleTitleChange.bind(this);
     //this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
   }
@@ -81,7 +83,6 @@ class TodoListIndexItem extends React.Component {
   }
 
   render() {
-
     if (!this.props.allTodos) {
       return null;
     }
@@ -139,6 +140,9 @@ class TodoListIndexItem extends React.Component {
           completed
         </div>
 
+
+        
+
         <div id="todo-list-item-header">
           <div id="todo-list-item-title">
             <img id="todo-list-item-title-first-img" src={window.drag_boy}/>
@@ -178,18 +182,18 @@ class TodoListIndexItem extends React.Component {
 
 
           <div className="big-new-todo-div">
-            <form autoComplete="off">
+            <form autoComplete="off" onSubmit={this.handleForm}>
               <header id="new-todo-header">
-                <input onChange={this.handleTitleChange} id="new-todo-title" placeholder="Describe this todo..."  className="create-todo-title" type="text" />
+                <input onChange={this.handleTitleChange} id="new-todo-title" placeholder="Describe this todo..."  className="create-todo-title" type="text"/>
               </header>
               <section>
                 <input onChange={this.handleDescriptionChange}  id="new-todo-description" placeholder="Add extra details..." className="create-todo-description" type="text" />
               </section>
 
               <div id="new-todo-form-buttons">
-                <div id="add-todo-button" onClick={this.handleForm}>
-                  <img src={window.add_this_todo} />
-                </div>
+                <input id="add-todo-button" type="image" src={window.add_this_todo}/>
+
+                
                 <div id="cancel-todo-button" onClick={this.handleCancel}>
                   <img src={window.cancel_new_list_button} />
                 </div>
