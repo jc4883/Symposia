@@ -1,0 +1,41 @@
+.display-flex-doc-show {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#doc-show-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#doc-show-image {
+  max-width: 500px;
+  max-height: 500px;
+}
+
+
+#doc-show-title {
+  font-size: 28px;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  color: #283c46;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+#doc-item-description {
+  font-size: 16px;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  color: #283c46;
+  font-weight: 400;
+}
+
+#doc-item-created-at {
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  color: #283c46;
+  font-size: 13px;
+  font-weight: 300;
+}

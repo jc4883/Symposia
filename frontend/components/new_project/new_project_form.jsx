@@ -19,6 +19,7 @@ class NewProjectForm extends React.Component {
     e.preventDefault();
     const title = document.getElementById("name-this-project").value;
     const description = document.getElementById("add-description").value;
+    const projectId = 
     this.props.createProject({title: `${title}`, description: `${description}`, user_id: `${this.props.currentUser.id}`})
       .then(this.props.history.push('/projects'))
     

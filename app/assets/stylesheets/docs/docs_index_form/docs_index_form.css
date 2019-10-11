@@ -1,0 +1,133 @@
+#docs-index-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+#docs-index-form-html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 2px dashed rgba(0,0,0,0.15);
+  border-radius: 0.6rem;
+  padding: 15px;
+}
+
+#form-excluding-submit-button {
+  display: flex;
+  flex-direction: row;
+
+  width: 650px;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1), 0 5px 20px rgba(0,0,0,0.05);
+
+}
+
+#form-excluding-submit-button input {
+  width: 160px;
+
+}
+
+#file-input-docs {
+  margin-top: 33px;
+  padding-left: 20px;
+  padding-right: 15px;
+  margin-bottom: 4px;
+}
+
+#docs-index-form-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+#docs-index-form-title {
+    
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 0.4rem;
+    line-height: 1.5;
+    font-weight: 700;
+    font-size: 19px;
+    margin-top: 33px;
+    box-sizing: border-box;
+    font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+    color: #283c46;
+    font-weight: 700;
+    padding: 9px;
+    width: 380px !important;
+}
+
+#docs-index-form-description {
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.4rem;
+  line-height: 1.5;
+  font-weight: 700;
+  font-size: 16px;
+  
+  box-sizing: border-box;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  color: #283c46;
+  font-weight: 400;
+  padding: 8px;
+  width: 420px !important;
+}
+
+#doc-notes-div {
+  display: block;
+  margin-bottom: 31px;
+}
+
+#doc-notes-div h2 {
+  color: rgb(40, 60, 70); 
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  color: #283c46;
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#docs-index-form-title-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#docs-index-form-title-container h2 {
+  font-size: 19px;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  color: #283c46;
+  font-weight: 700;
+  padding-top: 29px;
+}
+
+/* buttons start */
+
+#docs-index-form-buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 20px;
+  position: relative;
+  right: 150px;
+  outline: none;
+}
+
+#docs-index-form-buttons img {
+  padding-top: 4px;
+  height: 45px;
+}
+
+#constraint-attached {
+    max-width: 139px;
+    max-height: 137px;
+}
+
+#form-excluding-submit-button-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

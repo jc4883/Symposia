@@ -1,5 +1,5 @@
 class Project < ApplicationRecord
-  validates :user_id, :title, :project_id, presence: true
+  validates :user_id, :title, presence: true
 
   belongs_to :user,
   foreign_key: :user_id,

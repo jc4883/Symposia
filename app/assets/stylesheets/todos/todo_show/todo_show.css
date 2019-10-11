@@ -162,7 +162,7 @@
 }
 
 .hide-boi {
-  display: none;
+  display: none !important;
   opacity: 0;
 }
 

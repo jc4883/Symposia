@@ -28,4 +28,4 @@ const mapDispatchToProps = (dispatch) => {
   })
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TodoShow)
+export default connect(mapStateToProps, mapDispatchToProps)(TodoShow);

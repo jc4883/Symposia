@@ -1,0 +1,38 @@
+#doc-item {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 172px; 
+  height: 227px;
+  margin: 0.75em;
+  border-radius: 0.6rem;
+  box-shadow: 0 0 2px rgba(0,0,0,0.35), 0 1px 3px rgba(0,0,0,0.1);
+  background: #fff;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  color: #283c46;
+}
+
+#doc-item-image {
+  margin: 0 auto;
+  max-height: 80%;
+  max-width: 80%;
+  width: auto;
+}
+
+#doc-item-title {
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+#border-boi {
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 1px solid lightgray;
+}
+
+#doc-item-description {
+  margin: 0 auto;
+  font-size: 12px;
+  font-weight: 300;
+}
