@@ -12,7 +12,11 @@ class TodoListIndex extends React.Component {
     this.state = { redirect: false };
     this.handleRedirect = this.handleRedirect.bind(this);
     this.handleNewListButton = this.handleNewListButton.bind(this);
-    
+    this.parentUpdate = this.parentUpdate.bind(this);
+  }
+
+  parentUpdate() {
+    this.forceUpdate();
   }
 
   componentDidMount() {
@@ -67,7 +71,7 @@ class TodoListIndex extends React.Component {
             <NewTodoList projectId={this.props.projectId} createTodoList={this.props.createTodoList} history={this.props.history} />
           </div>
           {todoLists.slice(0).reverse().map((todoList) => {
-            return <TodoListIndexItem projectId={this.props.projectId} todoList={todoList} key={todoList.id} handleListShowCancel="false" />; 
+            return <TodoListIndexItem parentUpdate={this.parentUpdate} projectId={this.props.projectId} todoList={todoList} key={todoList.id} handleListShowCancel="false" />; 
           })}
         </div>
       </div>

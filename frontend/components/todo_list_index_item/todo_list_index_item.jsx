@@ -60,7 +60,7 @@ class TodoListIndexItem extends React.Component {
     const description = this.state.newTodoDescription;
     const newTodo = { title: `${title}`, description: `${description}`, done: "false", todo_list_id: `${this.state.id}` }
     //this.handleCancel = this.handleCancel.bind(this);
-    this.props.createTodo(newTodo);
+    this.props.createTodo(newTodo).then(this.props.parentUpdate());
     this.handleCancel();
     //this.handleTitleChange = this.handleTitleChange.bind(this);
     //this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
