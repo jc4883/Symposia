@@ -45,9 +45,9 @@ class TodoShow extends React.Component {
     this.props.updateTodo(newTodo);
     document.getElementById("todo-show-nav").classList.remove("center-checkbox")
 
-    document.getElementById("shortened-border-show-inputs").classList.remove("hide-boi");
+    document.getElementById("shortened-border-show-inputs").classList.remove("hide-boi-not-important");
     document.getElementById("update-form").classList.remove("show-todo-show-edit-form");
-    document.getElementById("right-of-image").classList.remove("hide-boi");
+    document.getElementById("right-of-image").classList.remove("hide-boi-not-important");
 
   }
 
@@ -56,8 +56,8 @@ class TodoShow extends React.Component {
   handleDiscard(e) {
     document.getElementById("todo-show-nav").classList.remove("center-checkbox")
 
-    document.getElementById("right-of-image").classList.remove("hide-boi");
-    document.getElementById("shortened-border-show-inputs").classList.remove("hide-boi");
+    document.getElementById("right-of-image").classList.remove("hide-boi-not-important");
+    document.getElementById("shortened-border-show-inputs").classList.remove("hide-boi-not-important");
     document.getElementById("update-form").classList.remove("show-todo-show-edit-form");
     this.setState({note: this.props.todo.description})
   }
@@ -78,8 +78,8 @@ class TodoShow extends React.Component {
       noteVal = "";
     }
     document.getElementById("todo-show-nav").classList.add("center-checkbox")
-    document.getElementById("right-of-image").classList.add("hide-boi")
-    document.getElementById("shortened-border-show-inputs").classList.add("hide-boi");
+    document.getElementById("right-of-image").classList.add("hide-boi-not-important")
+    document.getElementById("shortened-border-show-inputs").classList.add("hide-boi-not-important");
     document.getElementById("update-form").classList.add("show-todo-show-edit-form");
     this.setState({note: noteVal});
     this.setState({title: titleVal})
@@ -220,7 +220,7 @@ class TodoShow extends React.Component {
             </nav>
           </div>
           <div id="update-form-centering">
-            <form id="update-form" onSubmit={this.handleForm}  className="hide-boi">
+            <form id="update-form" onSubmit={this.handleForm}  className="hide-boi-not-important">
               <div id="update-form-title-container"><div>Title</div><input id="the-title-input" onChange={this.handleTitleChange} value={this.state.title} /></div>
               <div id="update-form-description-container"><div>Notes</div><input id="the-description-input" onChange={this.handleDescriptionChange} value={this.state.note} /></div>
               

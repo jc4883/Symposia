@@ -166,6 +166,11 @@
   opacity: 0;
 }
 
+.hide-boi-not-important {
+  display: none;
+  opacity: 0;
+}
+
 
 #update-form {
   display: block;
