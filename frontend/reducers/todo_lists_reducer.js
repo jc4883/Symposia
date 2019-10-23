@@ -8,6 +8,10 @@ const todoListsReducer = (state = {}, action) => {
       let newState3 = Object.assign({}, state);
       newState3[action.todo.todo_list_id].todos.push({id: action.todo.id})
       return newState3;
+    case RECEIVE_TODO_LIST:
+      //need to write show jbuilder
+      return Object.assign({}, state, {[Object.keys(action.todoList.todoList)[0]] : Object.values(action.todoList.todoList)[0]});
+
     case UPDATE_TODO: 
       let newState2 = Object.assign({}, state);
       const keys = Object.keys(state);
@@ -20,10 +24,7 @@ const todoListsReducer = (state = {}, action) => {
 
     case RECEIVE_ALL_TODO_LISTS:
      let newState1 = Object.assign({}, state);
-     return Object.assign(newState1, action.todoLists.todoLists)
-    case RECEIVE_TODO_LIST:
-      //need to write show jbuilder
-      return Object.assign({}, state, {[Object.keys(action.todoList.todoList)[0]] : Object.values(action.todoList.todoList)[0]});
+     return Object.assign(newState1, action.todoLists.todoLists);
     case REMOVE_TODO_LIST:
       let newState = Object.assign({}, state);
       delete newState[action.todoListId];

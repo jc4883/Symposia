@@ -55,20 +55,9 @@ class DocsIndexForm extends React.Component {
     if (this.state.photoFile) {
       formData.append('photo_upload[photo]', this.state.photoFile);
     }
-    /*
-    $.ajax({
-      url: `/api/projects/${this.props.projectId}/photo_uploads`,
-      method: "POST",
-      data: formData,
-      contentType: false,
-      processData: false
-    }).then(
-      (response) => console.log(response[0])
-    )
-    */
-   this.props.createPhotoUpload(this.props.projectId, formData).then(this.props.parentRender);
-
+    this.props.createPhotoUpload(this.props.projectId, formData).then(this.props.parentRender);
   }
+
 
   render() {
     const preview = this.state.photoUrl ? <img id="constraint-attached" src={this.state.photoUrl}/> : null;
