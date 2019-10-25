@@ -26,5 +26,6 @@ One thing to note on the handleSubmit() function is that at the point that we ap
 
 For the frontend, Redux's reducers allowed the data received from the backend to rerender React components when necessary. One interesting challenge occurred with the todo lists' reducer. For context, the todo list slice of state contains an array of only todo id's. The todo slice of state contains the actual information about the todos. So, when fetching a todo from the database, the reducers needed to update both of these slices of state. Therefore, the todo list reducer caught a RECEIVE_TODO case in addition to its own action.type's:
 
+
 ![alt text](https://user-images.githubusercontent.com/42103059/66664865-60928d00-ec1b-11e9-8339-08034978d52a.png)
 
