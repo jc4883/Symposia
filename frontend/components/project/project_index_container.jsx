@@ -1,14 +1,13 @@
 import React from 'react';
 import ProjectIndex from './project_index';
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions'
+import { logout } from '../../actions/session_actions';
 import { 
   fetchProjects, 
   fetchProject, 
   createProject, 
   updateProject, 
   deleteProject } from '../../actions/project_actions';
-
 
 const mapStateToProp = (state, ownProps) => {
   return ({

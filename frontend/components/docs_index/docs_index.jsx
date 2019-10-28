@@ -31,6 +31,7 @@ class DocsIndex extends React.Component {
     if (this.props.photoUploads === undefined) {
       return null;
     }
+
     const photoUploads = Object.values(this.props.photoUploads);
     return (
       <div id="big-todo-list-index-container">
