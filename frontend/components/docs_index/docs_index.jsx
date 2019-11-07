@@ -2,14 +2,22 @@ import React from 'react';
 import DocsIndexForm from '../docs_index_form/docs_index_form';
 import NavBar from '../nav_bar/nav_bar';
 import DocsIndexItem from './docs_index_item';
-
+import { Redirect } from 'react-router-dom';
 
 class DocsIndex extends React.Component {
   constructor(props) {
     super(props);
     this.handleNewDocButton = this.handleNewDocButton.bind(this);
     this.forceParentRender = this.forceParentRender.bind(this);
+    this.handleRedirect = this.handleRedirect.bind(this);
+    this.state = {redirect: false};
   }
+
+  handleRedirect() {
+    this.setState({redirect: true});
+  }
+
+
 
   handleNewDocButton() {
     document.getElementById("docs-index-form").classList.remove("hide-boi")
@@ -31,7 +39,9 @@ class DocsIndex extends React.Component {
     if (this.props.photoUploads === undefined) {
       return null;
     }
-
+    if (this.state.redirect) {
+      return <Redirect to={`/projects/${this.props.projectId}`}/>
+    }
     const photoUploads = Object.values(this.props.photoUploads);
     return (
       <div id="big-todo-list-index-container">
@@ -39,7 +49,7 @@ class DocsIndex extends React.Component {
         <NavBar currentUser={this.props.currentUser} logout={this.props.logout} />
         <nav id="project-title-todo-list-index">
 
-          <div id="for-project-title-todo-list-container">
+          <div id="for-project-title-todo-list-container" onClick={this.handleRedirect}>
             <img src={window.update_project_icon} />
             <div>{this.props.projectTitle}</div>
           </div>

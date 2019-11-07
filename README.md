@@ -4,7 +4,12 @@ Symposia is a clone of Basecamp, a product managment tool. Symposia does two thi
 
 Here is a link to the live site: https://symposia.herokuapp.com/#/projects/9/todo_lists
 
-Symposia uses Ruby on Rails, PostgreSQL, and AWS on the backend, React and Redux on the frontend. Ruby on Rails proved to be the appropriate technology for this project--Ruby on Rails was originally developed by Basecamp for their internal use. In particular, Rail's associations well complemented JBuilder to send to the frontend only the necessary information. For example, when showing an uploaded photo, the title of the project which it belongs to is displayed at the top. Through rails, only one trip to the database is required to retrieve both the title the uploaded photo information. 
+## Technologies
+
+Symposia uses Ruby on Rails, PostgreSQL, and AWS on the backend, React and Redux on the frontend. Ruby on Rails proved to be the appropriate technology for this project--Ruby on Rails was originally developed by Basecamp for their internal use. In particular, Rail's associations well complemented JBuilder to send to the frontend only the necessary information. 
+
+## Features
+When showing an uploaded photo, the title of the project which it belongs to is displayed at the top. Through rails, only one trip to the database is required to retrieve both the title the uploaded photo information. 
 
 In the controller, it is done as follows: 
 ![alt text](https://user-images.githubusercontent.com/42103059/66662796-7a31d580-ec17-11e9-9dfb-5e2b00722662.png)
