@@ -4,6 +4,7 @@ const photoUploadsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_ALL_PHOTO_UPLOADS:
+    debugger
       return Object.assign(action.photoUploads, state )
     case RECEIVE_PHOTO_UPLOAD:
       const key = Object.keys(action.photoUpload.uploads)[0];
