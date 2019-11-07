@@ -5,12 +5,22 @@ import { Redirect } from 'react-router-dom';
 class DocsShow extends React.Component {
   constructor(props) {
     super(props);
-        this.monthNames = [
+    this.monthNames = [
       "January", "February", "March",
       "April", "May", "June", "July",
       "August", "September", "October",
       "November", "December"
     ];
+    this.goToProject = this.goToProject.bind(this);
+    this.goToDocsAndFiles = this.goToDocsAndFiles.bind(this);
+  }
+
+  goToProject() {
+      this.props.history.push(`/projects/${this.props.projectId}`);
+  }
+
+  goToDocsAndFiles() {
+    this.props.history.push(`/projects/${this.props.projectId}/docs`);
   }
 
   componentDidMount() {
@@ -38,9 +48,13 @@ class DocsShow extends React.Component {
               <NavBar currentUser={this.props.currentUser} logout={this.props.logout} />
               <nav id="project-title-todo-list-index">
 
-                <div id="for-project-title-todo-list-container">
+                <div id="for-todo-list-show-project-title-container">
                   <img src={window.update_project_icon} />
-                  <div>{this.props.projectTitle}</div>
+                  <div>
+                    <h3 onClick={this.goToProject} id="first-h3-project">{this.props.projectTitle}</h3>
+                    <div className="no-style">></div> 
+                    <h3 onClick={this.goToDocsAndFiles} id="second-h3-todo">Docs &amp; Files</h3>
+                  </div>
                 </div>
               </nav>
 
