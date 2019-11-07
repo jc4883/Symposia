@@ -129,9 +129,6 @@ class ShowProject extends React.Component {
               <div onClick={this.handleTodo}  id="project_show_todo">
                 <img src={window.project_show_todo}/>
               </div>
-              <div onClick={this.handleSchedule} id="project_show_schedule">
-                <img src={window.project_show_schedule}/>
-              </div>
               <div onClick={this.handleDocs} id="project_show_docs">
                 <img src={window.project_show_docs} />
               </div>
@@ -149,11 +146,11 @@ class ShowProject extends React.Component {
             <h4>{this.props.currentUser.username} created this {month} {day}, {year}</h4>
             <p>This is the place to do everything related to this project — make plans, discuss progress, and get work done.</p>
             <div>
-              <a href="/no/where">Learn more about the tools above</a>
+              <a href="#">Learn more about the tools above</a>
               &nbsp;
               •
               &nbsp;
-              <a href="/no/where">Need a hand with anything? We're standing by!</a>
+              <a href="#">Need a hand with anything? We're standing by!</a>
             </div>
             
             <p>Make a Great Symposium!</p>

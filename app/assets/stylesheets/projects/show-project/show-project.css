@@ -199,7 +199,7 @@
 .todo_images {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 100px;
 }
 

@@ -1,6 +1,5 @@
 class Api::PhotoUploadsController < ApplicationController
   def index 
-    debugger
     project = Project.find_by(id: params[:project_id])
     @photo_uploads = project.photo_uploads
 
@@ -9,7 +8,6 @@ class Api::PhotoUploadsController < ApplicationController
   end
 
   def create
-    debugger
     @photo_upload = PhotoUpload.new(photo_upload_params)
     if @photo_upload.save
       render "api/photo_uploads/show"

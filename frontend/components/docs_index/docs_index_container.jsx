@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
     currentUser: state.entities.users[state.session.id],
     projectId: ownProps.match.params.projectId,
     photoUploads: state.entities.photoUploads.uploads,
-    projectTitle: state.entities.photoUploads.project_title,
+    projectTitle: state.entities.projects[ownProps.match.params.projectId].title,
   })
 }
 
