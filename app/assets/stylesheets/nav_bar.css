@@ -39,7 +39,6 @@
   flex-direction: row;
   justify-content: space-between;
   list-style-type: none;
-  cursor: pointer;
   font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
   font-size: 17px;
   font-weight: 700;
@@ -60,11 +59,19 @@
   margin-right: 110px;
 }
 
+.profile-clickable {
+  z-index: 5;
+}
 
 #profile-avatar {
   margin-right: 10px;
   display: flex;
   flex-direction: row;
+}
+
+#nav-bar-logo-div {
+  z-index: 5;
+  cursor: pointer;
 }
 
 #nav-bar-home #nav-bar-pings {

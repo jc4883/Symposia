@@ -69,7 +69,7 @@ class NavBar extends React.Component {
 
 
 
-        <li>
+        <li className="profile-clickable">
           <div id="profile-avatar">
               <button onClick={this.handleDropDown} id="profile-picture" className="circle">{this.props.currentUser.username.charAt(0).toUpperCase()}</button>
               
