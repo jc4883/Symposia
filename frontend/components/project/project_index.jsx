@@ -31,7 +31,7 @@ class ProjectIndex extends React.Component {
     //let sortedProjects = projects.sort((a, b) => b.created_at - a.created_at)
     return (
       <div id="project-index">
-        <NavBar currentUser={this.props.currentUser} logout={this.props.logout}/>
+        <NavBar history={this.props.history} currentUser={this.props.currentUser} logout={this.props.logout}/>
         <div id="your-projects">Your Projects</div>
         <ul id="project-index-items">
 

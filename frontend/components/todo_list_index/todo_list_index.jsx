@@ -53,7 +53,7 @@ class TodoListIndex extends React.Component {
 
     return (
       <div id="big-todo-list-index-container">
-        <NavBar currentUser={this.props.currentUser} logout={this.props.logout} />
+        <NavBar history={this.props.history} currentUser={this.props.currentUser} logout={this.props.logout} />
         <nav id="project-title-todo-list-index">
 
           <div id="for-project-title-todo-list-container" onClick={this.handleRedirect}>

@@ -6,20 +6,20 @@ class DocsIndexItem extends React.Component {
     super(props)
     this.photoUpload = this.props.photoUpload;
     this.handleShow = this.handleShow.bind(this);
-    this.state = {redirect: false};
     //we get this.props.photoUpload from DocsIndex
   }
 
   handleShow() {
-    this.setState({redirect: true});
+    this.props.fetchPhotoUpload().then(() => {
+      
+      this.props.history.push(`/projects/${this.props.projectId}/docs/${this.photoUpload.id}`);
+    })
   }
   
 
   render() {
 
-    if (this.state.redirect) {
-      return <Redirect to={`/projects/${this.props.projectId}/docs/${this.photoUpload.id}`}/>
-    }
+
     return (
       <div id="doc-item" onClick={this.handleShow}>
         <img id="doc-item-image" src={this.photoUpload.photoUrl} />

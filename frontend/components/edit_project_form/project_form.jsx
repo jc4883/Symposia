@@ -42,7 +42,7 @@ class ProjectForm extends React.Component {
     return (
       
       <div id="big-edit-project-container">
-        <NavBar currentUser={this.props.currentUser} logout={this.props.logout} />
+        <NavBar history={this.props.history} currentUser={this.props.currentUser} logout={this.props.logout} />
         <nav id="project-title-for-update">
           
           <div id="for-update-container" onClick={this.handleRedirect}>

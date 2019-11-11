@@ -13,10 +13,20 @@ class DocsShow extends React.Component {
     ];
     this.goToProject = this.goToProject.bind(this);
     this.goToDocsAndFiles = this.goToDocsAndFiles.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
+  }
+
+  handleDelete() {
+    this.props.deletePhotoUpload(this.props.photoUploadId).then(() => {
+      this.goToDocsAndFiles();
+      
+      
+    });
+    
   }
 
   goToProject() {
-      this.props.history.push(`/projects/${this.props.projectId}`);
+    this.props.history.push(`/projects/${this.props.projectId}`);
   }
 
   goToDocsAndFiles() {
@@ -33,6 +43,10 @@ class DocsShow extends React.Component {
       return null;
     }
     const photoUpload = this.props.photoUpload[this.props.photoUploadId];  
+    let downloadLink = "";
+    if (photoUpload) {
+      downloadLink = photoUpload.railsBlobUrl;
+    }
     let dateStr = photoUpload.created_at;
     dateStr = dateStr.slice(0, -1);
     let date = new Date(dateStr);
@@ -41,11 +55,15 @@ class DocsShow extends React.Component {
     let year = date.getFullYear();
     const createdAt = `${month} ${day}, ${year}`;
 
+    let source = "";
+    if (photoUpload.is_image) {
+      source = photoUpload.photoUrl;
+    }
 
     return (
       <div id="big-todo-list-index-container">
 
-              <NavBar currentUser={this.props.currentUser} logout={this.props.logout} />
+              <NavBar history={this.props.history} currentUser={this.props.currentUser} logout={this.props.logout} />
               <nav id="project-title-todo-list-index">
 
                 <div id="for-todo-list-show-project-title-container">
@@ -59,9 +77,12 @@ class DocsShow extends React.Component {
               </nav>
 
               <div id="doc-index-div" className="display-flex-doc-show"> 
-
+                <div className="doc-show-buttons">
+                  <a href={downloadLink}>Download</a>
+                  <button onClick={this.handleDelete}>Delete</button>
+                </div>
                 <div id="doc-show-div">
-                  <img id="doc-show-image" src={photoUpload.photoUrl} />
+                  <img id="doc-show-image" src={source} />
                   <h2 id="doc-show-title">{photoUpload.title}</h2>
                   <h4 id="doc-item-description">{photoUpload.description}</h4>
                   <h4 id="doc-item-created-at">Created on

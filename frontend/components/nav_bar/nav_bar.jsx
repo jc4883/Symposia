@@ -6,6 +6,7 @@ class NavBar extends React.Component {
     super(props);
     this.handleDropDown = this.handleDropDown.bind(this);
     this.scrollEventHandler = this.scrollEventHandler.bind(this);
+    this.goToRoot = this.goToRoot.bind(this);
   }
 
   scrollEventHandler() {
@@ -24,6 +25,10 @@ class NavBar extends React.Component {
     window.removeEventListener("scroll", this.scrollEventHandler);
   }
 
+  goToRoot() {
+    this.props.history.push("/projects");
+  }
+
 
 
   handleDropDown() {
@@ -34,7 +39,7 @@ class NavBar extends React.Component {
     return (
       <div id="big-container">
       <div id="nav">
-        <li id="nav-bar-logo-div">
+        <li id="nav-bar-logo-div" onClick={this.goToRoot}>
           <img id="nav-bar-symposia-logo" src={window.transparent_symposia_logo} />
           <div id="nav-bar-symposia">Symposia</div>
         </li>
@@ -47,11 +52,17 @@ class NavBar extends React.Component {
                 Home
               </Link>
             </li>
-            <li id="ping-li">
-              <img src={window.ping_icon} />
-              <div id="nav-bar-pings">
-                Pings
-              </div>
+            <li id="linkedin-li">
+              <img src={window.linkedin_icon}/>
+              <a target="_blank" href="https://www.linkedin.com/in/peterchoi24/">
+                LinkedIn              
+              </a>
+            </li>
+            <li id="github-li">
+              <img src={window.github_icon}/>
+              <a target="_blank" href="https://github.com/jc4883">
+                Github
+              </a>
             </li>
           </ul>
         </li>

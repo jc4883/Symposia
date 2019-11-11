@@ -187,7 +187,7 @@ class TodoListShow extends React.Component {
     
     return (
         <div id="big-todo-list-show-container">
-          <NavBar currentUser={this.props.currentUser} logout={this.props.logout}/>
+          <NavBar history={this.props.history} currentUser={this.props.currentUser} logout={this.props.logout}/>
           <nav id="project-title-todo-list-show">
 
             <div id="for-todo-list-show-project-title-container">

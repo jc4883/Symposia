@@ -16,7 +16,7 @@ Rails.application.routes.draw do
         resources :todos, only: [:index, :update, :create]
     end
     resources :todos, only: [:show, :destroy]
-    resources :photo_uploads, only: [:show]    
+    resources :photo_uploads, only: [:show, :destroy]    
     
 
   end 

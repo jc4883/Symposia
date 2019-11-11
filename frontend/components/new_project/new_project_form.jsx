@@ -29,7 +29,7 @@ class NewProjectForm extends React.Component {
     return (
       <div id="new-project-div">
         <div id="new-project-container">
-          <NavBar currentUser={this.props.currentUser} logout={this.props.logout} />
+          <NavBar history={this.props.history} history={this.props.history} currentUser={this.props.currentUser} logout={this.props.logout} />
           <img id="new-project-symposia-logo" src={window.transparent_symposia_logo} />
           <h2>All right, let's get your project started!</h2>
           <form onSubmit={this.handleSubmit} id="new-project-form">

@@ -78,7 +78,7 @@ class ShowProject extends React.Component {
     
     return (
       <div id="show-project-div">
-        <NavBar currentUser={this.props.currentUser} logout={this.props.logout} />
+        <NavBar history={this.props.history} currentUser={this.props.currentUser} logout={this.props.logout} />
         <div id="show-project-container">
 
           
@@ -146,11 +146,11 @@ class ShowProject extends React.Component {
             <h4>{this.props.currentUser.username} created this {month} {day}, {year}</h4>
             <p>This is the place to do everything related to this project — make plans, discuss progress, and get work done.</p>
             <div>
-              <a href="#">Learn more about the tools above</a>
+              <a target="_blank" href="https://github.com/jc4883/Symposia">Learn more about the tools above</a>
               &nbsp;
               •
               &nbsp;
-              <a href="#">Need a hand with anything? We're standing by!</a>
+              <a target="_blank" href="https://www.linkedin.com/in/peterchoi24/">Need a hand with anything? We're standing by!</a>
             </div>
             
             <p>Make a Great Symposium!</p>

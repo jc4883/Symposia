@@ -30,7 +30,7 @@ class DocsIndexForm extends React.Component {
   handleFile(e) {
     const file = e.currentTarget.files[0];
     const fileReader = new FileReader();
-    const cutPng = file.name.slice(0, -4); 
+    const cutPng = file.name; 
     //get photo url even before photo is uploaded
     fileReader.onloadend = () => {
       this.setState({photoFile: file, photoUrl: fileReader.result, title: cutPng});
@@ -58,7 +58,6 @@ class DocsIndexForm extends React.Component {
     this.props.createPhotoUpload(this.props.projectId, formData).then(this.props.parentRender);
   }
 
-
   render() {
     const preview = this.state.photoUrl ? <img id="constraint-attached" src={this.state.photoUrl}/> : null;
     return ( 
@@ -75,7 +74,6 @@ class DocsIndexForm extends React.Component {
             <div id="docs-index-form-inputs">
               <div id="docs-index-form-title-container">
                 <input id="docs-index-form-title" type="text" onChange={this.handleTitle} value={this.state.title} />
-                <h2>.png</h2>
               </div>
               <div id="doc-notes-div">
                 <h2>Notes</h2>

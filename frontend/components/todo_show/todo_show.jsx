@@ -152,7 +152,7 @@ class TodoShow extends React.Component {
     return (
 
       <div id="big-todo-show-container">
-        <NavBar currentUser={this.props.currentUser} logout={this.props.logout} />
+        <NavBar history={this.props.history} currentUser={this.props.currentUser} logout={this.props.logout} />
         <nav id="project-title-todo-show">
           <div>
             <div id="update-project-icon" onClick={this.updateChecked}>

@@ -53,6 +53,7 @@
 }
 
 #show-more-index {
+  cursor: pointer;
   float: right;
   margin: 10px 5px;
 }

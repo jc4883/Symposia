@@ -39,10 +39,9 @@
   flex-direction: row;
   justify-content: space-between;
   list-style-type: none;
-  
+  cursor: pointer;
   font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
-  font-size: 19px;
-  padding-left: 5px;
+  font-size: 17px;
   font-weight: 700;
 }
 
@@ -76,9 +75,57 @@
 }
 
 #nav-icons ul{
+  justify-content: space-evenly;
   display: flex;
+  width: 100%;
+  padding-left: 0;
 }
 
+#nav-icons {
+  width: 100%;
+  position: absolute;
+}
+
+#home-li a {
+  margin: 0;
+}
+
+#linkedin-li {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  color: #283c46;
+  text-decoration: none;
+}
+
+#linkedin-li img {
+  height: 24px;
+}
+
+#linkedin-li a {
+  font-weight: bold;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  color: #283c46;
+  text-decoration: none;
+}
+
+#github-li {
+  display: flex;
+  align-items: center;
+  
+}
+
+#github-li a {
+  font-weight: bold;
+  font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
+  color: #283c46;
+  text-decoration: none;
+}
+
+#github-li img {
+  height: 24px;
+}
 
 #profile-picture:hover {
   background-color: #2980B9;
@@ -206,4 +253,9 @@
 
 .show-line {
       border-bottom: 1px solid lightgrey;
+}
+
+#home-li {
+  align-items: center;
+
 }

@@ -15,6 +15,13 @@ export const createPhotoUpload = (projectId, formData) => {
   })
 }
 
+export const deletePhotoUpload = (id) => {
+  return $.ajax({
+    method: "DELETE",
+    url: `api/photo_uploads/${id}`,
+  })
+}
+
 export const fetchPhotoUpload = (id) => {
   return $.ajax({
     method: "GET",

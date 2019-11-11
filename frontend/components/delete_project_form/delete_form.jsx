@@ -27,7 +27,7 @@ class DeleteForm extends React.Component {
 
     return (
       <div id="big-delete-project-container">
-        <NavBar currentUser={this.props.currentUser} logout={this.props.logout} />
+        <NavBar history={this.props.history} currentUser={this.props.currentUser} logout={this.props.logout} />
         <nav id="project-title-for-delete">
           
           <div id="for-delete-container" onClick={this.handleRedirect}>

@@ -27,6 +27,8 @@ class DocsIndex extends React.Component {
     this.forceUpdate();
   }
 
+
+
   // handleRedirect() {
   //   this.props.history.push(`/projects/${this.props.projectId}`)
   // }
@@ -36,7 +38,7 @@ class DocsIndex extends React.Component {
   }
 
   render() {
-    if (this.props.photoUploads === undefined) {
+    if (!this.props.photoUploads) {
       return null;
     }
     if (this.state.redirect) {
@@ -46,7 +48,7 @@ class DocsIndex extends React.Component {
     return (
       <div id="big-todo-list-index-container">
 
-        <NavBar currentUser={this.props.currentUser} logout={this.props.logout} />
+        <NavBar history={this.props.history} currentUser={this.props.currentUser} logout={this.props.logout} />
         <nav id="project-title-todo-list-index">
 
           <div id="for-project-title-todo-list-container" onClick={this.handleRedirect}>
@@ -70,13 +72,13 @@ class DocsIndex extends React.Component {
           <div id="docs-index-form" className="hide-boi">
             <DocsIndexForm parentRender={this.forceParentRender} createPhotoUpload={this.props.createPhotoUpload} projectId={this.props.projectId}/>
           </div>
-          <ul id="documents-ul">
+          <div id="documents-ul">
             {photoUploads.map((photoUpload) => {
               return (
-                <DocsIndexItem key={photoUpload.id} projectId={this.props.projectId} photoUpload={photoUpload} />
+                <DocsIndexItem history={this.props.history} key={photoUpload.id} projectId={this.props.projectId} photoUpload={photoUpload} fetchPhotoUpload={() => this.props.fetchPhotoUpload(photoUpload.id)} />
               )
             })}
-          </ul> 
+          </div> 
           
 
         </div>        
