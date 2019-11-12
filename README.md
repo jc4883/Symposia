@@ -30,7 +30,8 @@ Upon uploading, the user can view the file's show page, where she can download o
 
 One technical achievement was efficiently accessing the title of the upload's project, which is displayed on the top of the upload show page. Through rails, only one trip to the database was required to retrieve both the project's title and the uploaded file information. 
 
-In the controller, it is done as follows: 
+In the controller, it is done as follows:
+
 ![alt text](https://user-images.githubusercontent.com/42103059/66662796-7a31d580-ec17-11e9-9dfb-5e2b00722662.png)
 
 Then in jbuilder, we can access the file's project:
@@ -55,5 +56,6 @@ I allowed the reducer to update both the array of todo id's in the todolists' st
 Thanks for coming! I hope you had fun poking around the code and checking out the live version. I certainly had a blast building it. 
 
 To see more of my projects, here is my portfolio: https://jc4883.github.io/ , and make sure to look around my Github as well.
+
 Finally, here is my LinkedIn to learn more about me: https://www.linkedin.com/in/peterchoi24/
 
