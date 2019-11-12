@@ -1,3 +1,11 @@
+#project_show_todo img {
+  cursor: pointer;
+}
+
+#project_show_docs img {
+  cursor: pointer;
+}
+
 #show-project-div {
   display: flex;
   justify-content: center;
@@ -84,13 +92,20 @@
     border: 1px solid #d9d9d9;
     margin-top: 2px;
     width: 146px;
-    height: 32px;
     font-family: "Graphik", "Helvetica Neue", helvetica, "Apple Color Emoji", arial, sans-serif;
     font-size: 13px;
     color: #283c46;
+    height: fit-content;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#project-show-invite-button:focus {
+  outline: none;
 }
 
 #show-more-project-show {
+  cursor: pointer;
   float: right;
   margin-top: 17px;
   margin-right: 14px;
@@ -210,6 +225,10 @@
 #drop-ul li div {
   display: block;
   padding: 24px 14px;
+}
+
+#show-dropdown-close img {
+  cursor: pointer;
 }
 
 #show-dropdown-close-container {

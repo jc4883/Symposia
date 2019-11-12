@@ -8,14 +8,19 @@ class DeleteForm extends React.Component {
   constructor(props) {
     super(props);
         
-    this.state =  Object.assign(this.props.project, {toProjectIndex: false});
+    this.state =  Object.assign(this.props.project, {toShow: false, toProjectIndex: false});
     this.title = this.props.project.title;
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleSubmit() {
     this.props.deleteProject(this.props.project.id)
       .then(this.setState({toProjectIndex: true}));
+  }
+
+  handleClick() {
+    this.setState({toShow: true});
   }
 
 
@@ -25,6 +30,10 @@ class DeleteForm extends React.Component {
       return <Redirect to={`/projects`} />
     }
 
+     if (this.state.toShow) {
+       return <Redirect to={`/projects/${this.props.projectId}`}/>
+     }
+
     return (
       <div id="big-delete-project-container">
         <NavBar history={this.props.history} currentUser={this.props.currentUser} logout={this.props.logout} />
@@ -32,7 +41,7 @@ class DeleteForm extends React.Component {
           
           <div id="for-delete-container" onClick={this.handleRedirect}>
             <img src={window.update_project_icon}/>
-            <div>{this.title}</div>
+            <div onClick={this.handleClick}>{this.title}</div>
           </div>
         </nav>
 

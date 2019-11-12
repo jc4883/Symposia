@@ -1,3 +1,83 @@
+#for-project-title-todo-list-container > div {
+  cursor: pointer;
+}
+
+#first-h3-project, #second-h3-todo, #first-h3-todo-show, #second-h3-todo-show, #third-h3-todo-show {
+  cursor: pointer;
+}
+
+#new-list-button > img {
+  cursor: pointer;
+}
+
+#todo-list-item-title > h1 {
+  cursor: pointer;
+}
+
+.checkbox-image, .show-todo-h3 {
+  cursor: pointer;
+}
+
+#show-todo-creator > img {
+  cursor: pointer;
+}
+
+#cancel-todo-button > img {
+  cursor: pointer;
+}
+
+#show-more-todo-show {
+  cursor: pointer;
+}
+
+#show-todo-creator-list-show > img {
+  cursor: pointer;
+}
+
+#todo-show-checkbox > img {
+  cursor: pointer;
+}
+
+#update-form-flex-row > div > img {
+  cursor: pointer;
+}
+
+#new-doc-button > img {
+  cursor: pointer;
+}
+
+#doc-item {
+  cursor: pointer;
+}
+
+.doc-show-buttons > a {
+  cursor: pointer;
+}
+
+.doc-show-buttons > button {
+  cursor: pointer;
+}
+
+#docs-index-form-buttons > div > img {
+  cursor: pointer;
+}
+
+#project-show-edit, #project-show-delete, #todo-show-delete, #todo-show-edit {
+  cursor: pointer;
+}
+
+#create-button, .update-button, #delete-button {
+  cursor: pointer;
+}
+
+#for-update-container > div {
+  cursor: pointer;
+}
+
+#for-delete-container > div {
+  cursor: pointer;
+}
+
 #doc-index-div {
   display: flex;
   flex-direction: column;

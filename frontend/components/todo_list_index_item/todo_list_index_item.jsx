@@ -152,9 +152,9 @@ class TodoListIndexItem extends React.Component {
           {notDoneTodos.map((todo) => {
             return <li key={todo.id}>
               <div onClick={this.handleCheckingBox(todo)}>
-                <img src={window.not_completed_box}/>
+                <img className="checkbox-image" src={window.not_completed_box}/>
               </div>
-              <h3 onClick={this.goToTodoShow(todo.id)}>{todo.title}</h3>
+              <h3 className="show-todo-h3" onClick={this.goToTodoShow(todo.id)}>{todo.title}</h3>
             </li>
           })}
         </ul>

@@ -16,6 +16,7 @@
 }
 
 .index-item-container {
+  cursor: pointer;
   list-style: none;
   background-color: #ffffff;
   border-radius: 5px;

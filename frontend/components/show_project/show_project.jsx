@@ -22,6 +22,7 @@ class ShowProject extends React.Component {
     this.handleDeleteClick = this.handleDeleteClick.bind(this);
   }
 
+
   handleEditClick() {
     this.props.history.push(`/projects/${this.props.project.id}/edit`);
   }
@@ -118,9 +119,9 @@ class ShowProject extends React.Component {
                 {this.props.currentUser.username.charAt(0).toUpperCase()}               
               </li>
               <li>
-                <button id="project-show-invite-button">
-                  Invite some people
-                </button>
+                <a target="_blank" href="https://github.com/jc4883/Symposia" id="project-show-invite-button" onClick={this.handleSourceCode}>
+                  View source code
+                </a>
               </li>
             </ul>
           </header>

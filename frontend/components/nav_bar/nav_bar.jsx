@@ -80,17 +80,17 @@ class NavBar extends React.Component {
                   <li className="profile-avatar-line"></li>
                 </ul>
                 <p>
-                  You're all set to be awe-struck by the Lord.
-                  May you recognize God's penmanship signed in the language of love.
+                 One of my most productive days was throwing away 1000 lines of code.
+                 <br/>
+                 <br/>
+                 - Ken Thompson
                 </p>
                 <ul id="personal-settings">
                   <li>Personal Settings</li>
                   <li className="profile-avatar-line"></li>
                 </ul>
                 <button className="log-out-button" onClick={this.props.logout}>Log Out</button>
-                <div id="feynman-container">
-                  <img id="feynman-gif" src={window.feynman}/>
-                </div>
+  
               </div>
           </div>
         </li>
