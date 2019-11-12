@@ -76,7 +76,7 @@ Then in jbuilder, we can access the file's project:
 
 We access the title of the file's project and the file's active storage blob using rails associations in the same request cycle. Therefore, there is no need to retrieve the project information with another ajax request.
 
-### Todo's
+### Todos
 Symposia also allows users to create todo lists, add todos, and view each individual list and todo.
 Here is what the todo list index page looks like:
 
