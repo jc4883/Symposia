@@ -50,7 +50,6 @@ In the controller, it is done as follows:
 ```Ruby
   def show
     @photo_upload = PhotoUpload.find(params[:id])
-    # @url = rails_blob_url(@photo_upload.photo, disposition: "attachment")
     if @photo_upload.photo.image?
       @is_image = true
     else
