@@ -108,7 +108,7 @@ I allowed the reducer to update both the array of todo id's in the todolists' st
 ## In Conclusion
 Thanks for coming! I hope you had fun poking around the code and checking out the live version. I certainly had a blast building it. 
 
-To see more of my projects, checkout my portfolio [here](https://jc4883.github.io/) , and make sure to look around my [Github](https://github.com/jc4883) as well.
+To see more of my projects, checkout my [portfolio](https://jc4883.github.io/), and make sure to look around my [Github](https://github.com/jc4883) as well.
 
-Finally, go to my LinkedIn to learn more about me [here](https://www.linkedin.com/in/peterchoi24/).
+Finally, go to my [LinkedIn](https://www.linkedin.com/in/peterchoi24/) to learn more about me.
 
