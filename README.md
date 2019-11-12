@@ -47,10 +47,33 @@ One technical achievement was efficiently accessing the title of the upload's pr
 
 In the controller, it is done as follows:
 
-![alt text](https://user-images.githubusercontent.com/42103059/66662796-7a31d580-ec17-11e9-9dfb-5e2b00722662.png)
+```JavaScript
+  def show
+    @photo_upload = PhotoUpload.find(params[:id])
+    # @url = rails_blob_url(@photo_upload.photo, disposition: "attachment")
+    if @photo_upload.photo.image?
+      @is_image = true
+    else
+      @is_image = false
+    end
+    render "api/photo_uploads/show"
+  end
+```
 
 Then in jbuilder, we can access the file's project:
-![alt text](https://user-images.githubusercontent.com/42103059/66662780-7605b800-ec17-11e9-8489-8e7ce0080052.png)
+```JavaScript 
+  json.set! :project_title, @photo_upload.project.title
+  json.set! :uploads do
+    json.set! @photo_upload.id do
+      json.extract! @photo_upload, :id, :title, :description, :project_id, :created_at
+      if @delete != true
+        json.photoUrl url_for(@photo_upload.photo)
+        json.railsBlobUrl rails_blob_url(@photo_upload.photo, disposition: "attachment")
+        json.is_image @is_image
+      end
+    end
+  end
+```
 
 We access the title of the file's project and the file's active storage blob using rails associations in the same request cycle. Therefore, there is no need to retrieve the project information with another ajax request.
 
@@ -62,7 +85,23 @@ Here is what the todo list index page looks like:
 
 In the frontend, one interesting challenge occurred with the todo lists' redux reducer. For context, the todo list slice of state contains an array of only todo id's. On the other hand, the todo slice of state contains the actual information about the todos. This design choice was to ensure that the state contained as little nesting as possible. Here is a code snippet of how I implemented this structure in the todo lists' reducer:
 
-![alt text](https://user-images.githubusercontent.com/42103059/66664865-60928d00-ec1b-11e9-8339-08034978d52a.png)
+```JavaScript
+  const todoListsReducer = (state = {}, action) => {
+    Object.freeze(state);
+    switch (action.type) {
+      case RECEIVE_TODO:
+        let newState3 = Object.assign({}, state);
+        newState3[action.todo.todo_list_id].todos.push({id: action.todo.id})
+        return newState3;
+      case RECEIVE_TODO_LIST:
+        return Object.assign({}, state, {[Object.keys(action.todoList.todoList)[0]]: Object.values(action.todoList.todoList)[0]});
+      ...
+      default:
+        return state;
+    }
+  }
+
+``
 
 
 I allowed the reducer to update both the array of todo id's in the todolists' state and the actual todos in their own state. This is why the todo list reducer catches the RECEIVE_TODO action type case in addition to its own action.type in the code snippet above.
