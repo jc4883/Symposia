@@ -38,9 +38,22 @@ Then in jbuilder, we can access the file's project:
 
 We access the title of the file's project and the file's active storage blob using rails associations in the same request cycle. Therefore, there is no need to retrieve the project information with another ajax request.
 
-### Todo
-For the frontend, Redux's reducers allowed the data received from the backend to rerender React components when necessary. One interesting challenge occurred with the todo lists' reducer. For context, the todo list slice of state contains an array of only todo id's. The todo slice of state contains the actual information about the todos. So, when fetching a todo from the database, the reducers needed to update both of these slices of state. Therefore, the todo list reducer caught a RECEIVE_TODO case in addition to its own action.type's:
+### Todo's
+Symposia also allows users to create todo lists, add todos, and view each individual list and todo.
+Here is what the todo list index page looks like:
 
+[gif of todo list]
+
+In the frontend, one interesting challenge occurred with the todo lists' redux reducer. For context, the todo list slice of state contains an array of only todo id's. On the other hand, the todo slice of state contains the actual information about the todos. This design choice was to ensure that the state contained as little nesting as possible. Here is a code snippet of how I implemented this structure in the todo lists' reducer:
 
 ![alt text](https://user-images.githubusercontent.com/42103059/66664865-60928d00-ec1b-11e9-8339-08034978d52a.png)
+
+
+I allowed the reducer to update both the array of todo id's in the todolists' state and the actual todos in their own state. This is why the todo list reducer catches the RECEIVE_TODO action type case in addition to its own action.type in the code snippet above.
+
+## In Conclusion
+Thanks for coming! I hope you had fun poking around the code and checking out the live version. I certainly had a blast building it. 
+
+To see more of my projects, here is my portfolio: https://jc4883.github.io/ , and make sure to look around my Github as well.
+Finally, here is my LinkedIn to learn more about me: https://www.linkedin.com/in/peterchoi24/
 
