@@ -47,7 +47,7 @@ One technical achievement was efficiently accessing the title of the upload's pr
 
 In the controller, it is done as follows:
 
-```JavaScript
+```Ruby
   def show
     @photo_upload = PhotoUpload.find(params[:id])
     # @url = rails_blob_url(@photo_upload.photo, disposition: "attachment")
@@ -61,7 +61,7 @@ In the controller, it is done as follows:
 ```
 
 Then in jbuilder, we can access the file's project:
-```JavaScript 
+```Ruby 
   json.set! :project_title, @photo_upload.project.title
   json.set! :uploads do
     json.set! @photo_upload.id do
@@ -101,7 +101,7 @@ In the frontend, one interesting challenge occurred with the todo lists' redux r
     }
   }
 
-``
+```
 
 
 I allowed the reducer to update both the array of todo id's in the todolists' state and the actual todos in their own state. This is why the todo list reducer catches the RECEIVE_TODO action type case in addition to its own action.type in the code snippet above.
