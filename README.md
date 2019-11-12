@@ -16,7 +16,22 @@ A user is able to save a local file to AWS by choosing a local file and adding a
 
 In the backend, the formData API was used to encapsulate user data, primarily reading an input of type="file" when the user chooses an image inside of a form. Upon form submission, the following function is called: 
 
-![alt text](https://user-images.githubusercontent.com/42103059/66665787-3e017380-ec1d-11e9-973c-da9aaef5fcaa.png)
+```JavaScript 
+  handleSubmit(e) {
+    e.preventDefault();
+    this.handleCancel();
+    let formData = new FormData();
+    formData.append('photo_upload[title]', this.state.title);
+    formData.append('photo_upload[description]', this.state.description);
+    formData.append('photo_upload[project_id]', this.props.projectId);
+    
+    if (this.state.photoFile) {
+      formData.append('photo_upload[photo]', this.state.photoFile);
+    }
+    this.props.createPhotoUpload(this.props.projectId, formData).then(this.props.parentRender);
+  }
+
+```
 
 Here, the local state of the component is updated to the values given by the user. Then, we append the data to the formData using the keys specified in our Rails model. This way, the appropriate controller in the backend is able to access the data through its params, then correctly save a new upload entry to PostgreSQL. If successful, we return information about what we have saved, including the upload's url extracted using url_for() and an association(!). The upload can be can be viewed if it is an image by placing the photoUrl as the src in an img tag.
 
