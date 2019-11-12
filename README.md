@@ -13,7 +13,7 @@ Symposia uses Ruby on Rails, PostgreSQL, and AWS on the backend, React and Redux
 A user is able to save a local file to AWS by choosing a local file and adding a description to it using a form. Here's what it looks like:
 
 [gif of demonstration]
-
+![](docs_upload_demo.gif)
 
 In the backend, the formData API was used to encapsulate user data, primarily reading an input of type="file" when the user chooses an image inside of a form. Upon form submission, the following function is called: 
 
@@ -26,7 +26,7 @@ One more thing to note about this code snippet: in the handleSubmit() function, 
 
 Upon uploading, the user can view the file's show page, where she can download or delete the file from the cloud. This is what it looks like:
 
-[show page image]
+[docs_show.png]
 
 One technical achievement was efficiently accessing the title of the upload's project, which is displayed on the top of the upload show page. Through rails, only one trip to the database was required to retrieve both the project's title and the uploaded file information. 
 
@@ -43,7 +43,7 @@ We access the title of the file's project and the file's active storage blob usi
 Symposia also allows users to create todo lists, add todos, and view each individual list and todo.
 Here is what the todo list index page looks like:
 
-[gif of todo list]
+[todolist_demo]
 
 In the frontend, one interesting challenge occurred with the todo lists' redux reducer. For context, the todo list slice of state contains an array of only todo id's. On the other hand, the todo slice of state contains the actual information about the todos. This design choice was to ensure that the state contained as little nesting as possible. Here is a code snippet of how I implemented this structure in the todo lists' reducer:
 
