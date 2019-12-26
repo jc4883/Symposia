@@ -2,6 +2,7 @@
 
 Symposia is a clone of Basecamp, a product managment tool. Symposia does two things: organizes the user's todo's into todo lists, and stores files for viewing and downloading. 
 
+
 Visit the live site [here](https://symposia.herokuapp.com/).
 
 ## Technologies
