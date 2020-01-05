@@ -7,7 +7,6 @@ Visit the live site [here](https://symposia.herokuapp.com/).
 
 ## Technologies
 
-
 Symposia uses Ruby on Rails, PostgreSQL, and AWS on the backend, React and Redux on the frontend. Ruby on Rails proved to be the appropriate technology for this project--Ruby on Rails was originally developed by Basecamp for their internal use. In particular, Rail's associations well complemented JBuilder to send to the frontend the necessary data, allowing the user to have a productive time on Symposia. 
 
 ## Features
